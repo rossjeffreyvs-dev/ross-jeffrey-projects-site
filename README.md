@@ -1,1 +1,6 @@
 # ross-jeffrey-projects-site
+
+# Domain - ross-jeffrey.me
+# Vercel - ross.jeffrey.vs
+# Twillio Send Grid - ross.jeffrey.vs
+# GitHub - rossjeffreyvs-dev

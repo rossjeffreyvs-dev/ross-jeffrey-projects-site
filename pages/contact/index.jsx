@@ -52,7 +52,7 @@ export default function Contact() {
       <section className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 py-20 px-4">
         <div className="max-w-xl w-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md relative">
           <h1 className="text-3xl font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
-            Contact Me
+            Contact Me!
           </h1>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
             Send me a message — I’ll get back to you soon.

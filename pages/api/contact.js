@@ -7,19 +7,17 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { name, company, email, message } = req.body;
+  const { name, email, message } = req.body;
 
   try {
     await sendgrid.send({
-      to: "youremail@yourdomain.com", // 👈 your receiving email address
-      from: "noreply@yourdomain.com", // 👈 must be verified in SendGrid
-      subject: `New contact from ${name}`,
+      to: "ross.jeffrey.vs@gmail.com",
+      from: "contact@jeffrey-ross.me", // must match verified sender/domain
+      subject: `New message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Company:</strong> ${company}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
     });
 

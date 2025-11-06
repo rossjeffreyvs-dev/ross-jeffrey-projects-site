@@ -56,13 +56,17 @@ export default function Footer() {
           <h4 className="font-semibold mb-2">Social</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="#" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com/rossjeffreyvs-dev?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
               </Link>
             </li>
             <li>
               <Link
-                href="/docs/jeffrey-ross-resume.pdf"
+                href="https://www.linkedin.com/in/jeffrey-ross1"
                 target="_blank"
                 rel="noopener noreferrer"
               >

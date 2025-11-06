@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100">
       <Navbar />
 
-      <main className="flex-grow pt-24">
+      <main className="flex-grow pt-12">
         <section className="text-center px-4 py-20 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-extrabold">
             Where AI, Product Vision, and Engineering Meet
@@ -70,30 +70,40 @@ export default function Home() {
         <section className="py-20 px-4">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold">
-              Why teams build on VercelClone
+              Why Teams Build with Confidence
             </h2>
             <div className="mt-12 grid gap-10 md:grid-cols-3">
               <div>
-                <h3 className="text-xl font-semibold">Zero-config Deploys</h3>
+                <h3 className="text-xl font-semibold">
+                  AI & Data Platform Leadership
+                </h3>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  Deploy from Git in seconds with automatic HTTPS and a global
-                  CDN.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">Live Previews</h3>
-                <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  Every push creates a preview URL so your team can review along
-                  the way.
+                  Built enterprise-scale AI and data infrastructure at Memorial
+                  Sloan Kettering, integrating LIMS, Foundry, and GPT-5 to
+                  streamline research workflows and accelerate trial eligibility
+                  analysis.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold">
-                  Edge-first Performance
+                  Full-Stack Product Innovation
                 </h3>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  Run your frontend and functions at the edge for minimal
-                  latency and maximum scale.
+                  Led modernization of $100M global platforms at Euromoney
+                  Institutional Investor—architecting Salesforce and Azure-based
+                  SaaS systems that improved operational efficiency and grew
+                  digital revenue 15% YoY.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold">
+                  Founder-Driven Engineering Mindset
+                </h3>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                  Created and scaled multiple SaaS ventures, from social
+                  networking at SixDegrees.com to content and campaign
+                  platforms, combining hands-on coding expertise with product
+                  vision and user-centric design.
                 </p>
               </div>
             </div>

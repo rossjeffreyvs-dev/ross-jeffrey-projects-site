@@ -86,23 +86,37 @@ export default function Navbar() {
                       >
                         <span>📣</span>
                         <div>
-                          <p className="font-semibold">AI Résumé Match</p>
+                          <p className="font-semibold">Main</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
-                            AI comparison to job description
+                            List of sample projects
                           </p>
                         </div>
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/blog"
+                        href="https://ai-resume-match.0wewkfcxyckmt.us-east-1.cs.amazonlightsail.com/"
+                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
+                      >
+                        <span>📣</span>
+                        <div>
+                          <p className="font-semibold">AI Résumé Match</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            Compare to job description
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
                         <span>📝</span>
                         <div>
-                          <p className="font-semibold">Blog</p>
+                          <p className="font-semibold">Agentic AIP Workflow</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
-                            The latest posts and changes
+                            Review patients for trial
                           </p>
                         </div>
                       </Link>

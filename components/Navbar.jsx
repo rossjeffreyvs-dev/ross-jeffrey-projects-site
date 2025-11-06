@@ -86,9 +86,9 @@ export default function Navbar() {
                       >
                         <span>📣</span>
                         <div>
-                          <p className="font-semibold">Projects</p>
+                          <p className="font-semibold">AI Résumé Match</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
-                            Trusted by the best teams
+                            AI comparison to job description
                           </p>
                         </div>
                       </Link>

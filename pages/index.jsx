@@ -10,7 +10,7 @@ export default function Home() {
       <main className="flex-grow pt-12">
         <section className="text-center px-4 py-20 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-extrabold">
-            Where AI, Product Vision, and Engineering Meet
+            Where AI, Product Vision, and Engineering Meets
           </h1>
           <p className="mt-4 text-xl text-gray-600 dark:text-gray-400">
             Bridging advanced AI research with real-world product execution.

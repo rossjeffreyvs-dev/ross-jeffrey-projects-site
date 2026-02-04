@@ -1,7 +1,27 @@
-node_modules/
-.next/
-dist/
-.vercel/
-.env
+
+# macOS
 .DS_Store
+
+# Node / JS
+node_modules/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Build output (if applicable)
+.next/
+.vercel/
 .vercel
+dist/
+build/
+out/
+.DS_Store
+launch.json
+public/.DS_Store

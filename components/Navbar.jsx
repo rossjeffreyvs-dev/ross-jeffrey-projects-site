@@ -95,7 +95,7 @@ export default function Navbar() {
                     </li>
                     <li>
                       <Link
-                        href="https://ai-resume-match.0wewkfcxyckmt.us-east-1.cs.amazonlightsail.com/"
+                        href="https://resume-analyzer.jeffrey-ross.me"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
                         <span>📣</span>

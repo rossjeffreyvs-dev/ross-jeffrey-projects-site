@@ -5,35 +5,30 @@ import { useState } from "react";
 
 const categories = [
   "All Posts",
+  "AI / Automation",
+  "Enterprise Data Platforms",
   "Engineering",
-  "Community",
-  "Company News",
-  "Customers",
-  "v0",
-  "Changelog",
-  "Press",
 ];
 
 const posts = [
   {
-    title: "You Can Just Ship Agents",
-    date: "Oct 23",
-    category: "Engineering",
+    title: "Agentic AI",
+    date: "Dec 2025",
+    category: "AI / Automation",
     summary:
       "A new era of shipping: deploy AI agents just like web apps. Vercel enables seamless hosting of LLM-driven apps.",
     href: "/blog/you-can-just-ship-agents",
   },
   {
-    title: "Built-in durability: Introducing Workflow Development Kit",
-    date: "Oct 23",
-    category: "v0",
-    summary:
-      "Building reliable software shouldn't require mastering distributed systems. The WDK helps build durable AI pipelines.",
+    title: "Concordance testing.",
+    date: "Oct 2025",
+    category: "Enterprise Data Platforms",
+    summary: "Concordance testing.",
     href: "#",
   },
   {
-    title: "Zero-config backends on Vercel AI Cloud",
-    date: "Oct 23",
+    title: "",
+    date: "Jan 2026",
     category: "Engineering",
     summary:
       "Extend your frontend with powerful AI-first backend logic running at the edge.",

@@ -2,3 +2,20 @@ Domain - ross-jeffrey.me
 Vercel - ross.jeffrey.vs
 Twillio Send Grid - ross.jeffrey.vs
 GitHub - rossjeffreyvs-dev
+
+## Embedded Lightsail demos (hybrid)
+
+This site includes a hybrid "embedded demo" pattern:
+
+- `/projects/ai-resume-analyzer` renders a page with the site header/footer and an iframe.
+- The iframe loads `/resume-analyzer/`, which is proxied to the Lightsail app via a Next.js rewrite
+  defined in `next.config.js`.
+
+### Requirements
+
+- Your Lightsail container service must be reachable at:
+  `https://resume-analyzer.jeffrey-ross.me/`
+- That domain must have a valid TLS certificate (Lightsail certificate attached to the service).
+
+If the iframe shows a blank page, check that the demo app does not send restrictive framing
+headers (e.g., `X-Frame-Options: DENY` or CSP `frame-ancestors`).

@@ -6,25 +6,21 @@
 :root {
   color-scheme: light dark;
 }
-
 html,
 body {
   height: 100%;
 }
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 /* Layout */
 .blogPage {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 .blogMain {
   flex-grow: 1;
   padding-top: 6rem; /* pt-24 */
@@ -34,7 +30,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 /* Title + meta */
 .blogTitle {
   font-size: 2.25rem; /* text-4xl */
@@ -42,13 +37,11 @@ body {
   font-weight: 700; /* font-bold */
   margin: 0;
 }
-
 .blogMeta {
   margin-top: 1rem; /* mt-4 */
   color: #6b7280; /* text-gray-500 */
   font-size: 1rem;
 }
-
 /* Prose section (mirrors `mt-8 space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300`) */
 .blogProse {
   margin-top: 2rem; /* mt-8 */
@@ -59,10 +52,10 @@ body {
   flex-direction: column;
   gap: 1.5rem; /* space-y-6 */
 }
-
 html.dark .blogProse {
   color: #d1d5db;
-} /* dark:text-gray-300 */
+}
+/* dark:text-gray-300 */
 
 /* Headings inside prose */
 .blogProse h2 {
@@ -75,7 +68,6 @@ html.dark .blogProse {
 html.dark .blogProse h2 {
   color: #f9fafb;
 }
-
 .blogProse h3 {
   margin: 1.75rem 0 0.5rem;
   font-size: 1.25rem;
@@ -86,11 +78,9 @@ html.dark .blogProse h2 {
 html.dark .blogProse h3 {
   color: #f9fafb;
 }
-
 .blogProse p {
   margin: 0;
 }
-
 /* Lists */
 .blogProse ul {
   margin: 0;
@@ -100,7 +90,6 @@ html.dark .blogProse h3 {
 .blogProse li {
   margin: 0.5rem 0;
 }
-
 /* Callout / note */
 .blogCallout {
   border: 1px solid rgba(229, 231, 235, 1);
@@ -115,7 +104,6 @@ html.dark .blogCallout {
   background: rgba(17, 24, 39, 1);
   color: #e5e7eb;
 }
-
 /* Images */
 .blogFigure {
   margin: 0;
@@ -129,7 +117,6 @@ html.dark .blogCallout {
 html.dark .blogFigure img {
   border-color: rgba(31, 41, 55, 1);
 }
-
 .blogCaption {
   margin-top: 0.5rem;
   font-size: 0.95rem;
@@ -147,7 +134,6 @@ html.dark .blogCaption {
   display: flex;
   flex-direction: column;
 }
-
 .contactSection {
   flex: 1;
   min-height: 100vh;
@@ -158,11 +144,9 @@ html.dark .blogCaption {
   padding: 5rem 1rem; /* py-20 px-4 */
   background: #f9fafb; /* gray-50 */
 }
-
 html.dark .contactSection {
   background: #111827; /* gray-900 */
 }
-
 .contactCard {
   width: 100%;
   max-width: 36rem; /* max-w-xl */
@@ -172,11 +156,9 @@ html.dark .contactSection {
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08); /* shadow-md-ish */
   position: relative;
 }
-
 html.dark .contactCard {
   background: #1f2937; /* gray-800 */
 }
-
 .contactTitle {
   margin: 0 0 1rem;
   font-size: 1.875rem; /* text-3xl */
@@ -185,27 +167,22 @@ html.dark .contactCard {
   text-align: center;
   color: #1f2937; /* gray-800 */
 }
-
 html.dark .contactTitle {
   color: #f9fafb; /* gray-50 */
 }
-
 .contactSubtitle {
   margin: 0 0 2rem;
   text-align: center;
   color: #4b5563; /* gray-600 */
 }
-
 html.dark .contactSubtitle {
   color: #9ca3af; /* gray-400 */
 }
-
 .contactForm {
   display: flex;
   flex-direction: column;
   gap: 1.5rem; /* space-y-6 */
 }
-
 .contactField {
   width: 100%;
   padding: 0.75rem; /* p-3 */
@@ -215,18 +192,15 @@ html.dark .contactSubtitle {
   color: #111827;
   outline: none;
 }
-
 .contactField:focus {
   border-color: rgba(37, 99, 235, 0.55); /* blue-600-ish */
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
 }
-
 html.dark .contactField {
   background: #111827; /* gray-900 */
   border-color: #374151; /* gray-700 */
   color: #f9fafb;
 }
-
 .contactButton {
   width: 100%;
   padding: 0.75rem 0; /* py-3 */
@@ -241,16 +215,13 @@ html.dark .contactField {
     transform 160ms ease,
     opacity 160ms ease;
 }
-
 .contactButton:hover {
   background: #1d4ed8; /* blue-700 */
 }
-
 .contactButton:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
-
 /* Toast */
 .contactToastWrap {
   position: fixed;
@@ -258,7 +229,6 @@ html.dark .contactField {
   right: 1.5rem; /* right-6 */
   z-index: 50;
 }
-
 .contactToast {
   display: flex;
   align-items: center;
@@ -268,27 +238,160 @@ html.dark .contactField {
   color: #ffffff;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
 }
-
 .contactToastSuccess {
   background: #22c55e; /* green-500 */
 }
-
 .contactToastError {
   background: #ef4444; /* red-500 */
 }
-
 .contactToastIcon {
   font-size: 1.5rem; /* text-2xl */
   line-height: 1;
 }
-
 .contactToastTitle {
   margin: 0;
   font-weight: 600;
 }
-
 .contactToastText {
   margin: 0.25rem 0 0;
   font-size: 0.875rem; /* text-sm */
   color: rgba(255, 255, 255, 0.9); /* text-white/90 */
+}
+/* -------------------------------------------------------------------------- */
+/* Projects page styles                                                       */
+/* -------------------------------------------------------------------------- */
+
+.projectsPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.projectsMain {
+  flex: 1;
+  padding-top: 6rem; /* pt-24 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  max-width: 80rem; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+.projectsHero {
+  text-align: center;
+  margin-bottom: 4rem; /* mb-16 */
+}
+.projectsTitle {
+  margin: 0 0 1.5rem; /* mb-6 */
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 2.5rem;
+  font-weight: 700; /* font-bold */
+}
+@media (min-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.projectsSubtitle {
+  margin: 0;
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  color: #4b5563; /* gray-600 */
+}
+html.dark .projectsSubtitle {
+  color: #9ca3af; /* gray-400 */
+}
+.projectsGrid {
+  display: grid;
+  gap: 1.5rem; /* gap-6 */
+}
+@media (min-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.projectCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 2rem; /* p-8 */
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+}
+.projectCard:hover {
+  background: #f9fafb; /* gray-50 */
+}
+html.dark .projectCard {
+  background: #000000;
+  border-color: #1f2937;
+}
+html.dark .projectCard:hover {
+  background: #1f2937; /* gray-800 */
+}
+.projectCardTitle {
+  margin: 0;
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #111827; /* gray-900 */
+}
+html.dark .projectCardTitle {
+  color: #f3f4f6; /* gray-100 */
+}
+.projectCardText {
+  margin-top: 0.5rem; /* mt-2 */
+  color: #4b5563; /* gray-600 */
+  line-height: 1.6;
+}
+html.dark .projectCardText {
+  color: #9ca3af; /* gray-400 */
+}
+.projectLinks {
+  margin-top: 2rem; /* mt-8 */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem; /* replaces space-x-4 with wrapping-safe gap */
+}
+.projectLinkPrimary {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.9;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    background-color 160ms ease;
+}
+.projectLinkPrimary:hover {
+  opacity: 1;
+}
+html.dark .projectLinkPrimary {
+  background: #ffffff;
+  color: #000000;
+}
+.projectLinkSecondary {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #000000;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    opacity 160ms ease;
+}
+.projectLinkSecondary:hover {
+  background: #e5e7eb;
+}
+html.dark .projectLinkSecondary {
+  background: #ffffff;
+  color: #000000;
 }

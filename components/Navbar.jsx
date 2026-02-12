@@ -114,9 +114,9 @@ export default function Navbar() {
                       >
                         <span>📝</span>
                         <div>
-                          <p className="font-semibold">Agentic AIP Workflow</p>
+                          <p className="font-semibold">AI FX Insights</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
-                            Review patients for trial
+                            Foreign exchange client report
                           </p>
                         </div>
                       </Link>

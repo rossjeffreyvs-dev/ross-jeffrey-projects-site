@@ -179,7 +179,7 @@ export default function Navbar() {
                         </div>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href="/recommendations"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
@@ -192,7 +192,7 @@ export default function Navbar() {
                           </p>
                         </div>
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </motion.div>
               )}

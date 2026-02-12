@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/content.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 

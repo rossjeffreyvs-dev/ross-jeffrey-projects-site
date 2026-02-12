@@ -111,7 +111,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-black dark:bg-white text-white dark:text-black">
+        {/* <section className="py-20 px-4 bg-black dark:bg-white text-white dark:text-black">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold">Ready to start shipping?</h2>
             <Link
@@ -121,7 +121,7 @@ export default function Home() {
               Create your account
             </Link>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <Footer />

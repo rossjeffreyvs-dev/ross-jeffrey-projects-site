@@ -12,27 +12,34 @@ const categories = [
 
 const posts = [
   {
-    title: "Agentic AI",
-    date: "Dec 2025",
-    category: "AI / Automation",
-    summary:
-      "A new era of shipping: deploy AI agents just like web apps. Vercel enables seamless hosting of LLM-driven apps.",
-    href: "/blog/you-can-just-ship-agents",
+    title: "Common Data Model (CDM)",
+    date: "Oct 2025",
+    category: "Enterprise Data Platforms",
+    summary: `Modern biobanking is not just about storing specimens — it’s about structuring data so research is 
+      discoverable, reproducible, and scalable. At Memorial Sloan Kettering (MSK), we designed a shared 
+      Common Data Model (CDM) across multiple biobanks and layered an ontology in Palantir Foundry to power 
+      cross-biobank search and specimen discovery for cancer research investigators.`,
+    href: "/blog/ontology-vs-cdm-biobanking",
   },
   {
     title: "Concordance testing.",
-    date: "Oct 2025",
+    date: "Nov 2025",
     category: "Enterprise Data Platforms",
-    summary: "Concordance testing.",
-    href: "#",
+    summary: `Concordance testing is the backbone of trustworthy data migrations and integrations—especially 
+    in regulated clinical research environments. At Memorial Sloan Kettering (MSK), we used concordance testing 
+    to validate a large-scale migration and daily synchronization.`,
+    href: "/blog/concordance-testing",
   },
   {
-    title: "",
-    date: "Jan 2026",
-    category: "Engineering",
-    summary:
-      "Extend your frontend with powerful AI-first backend logic running at the edge.",
-    href: "#",
+    title: "Agentic AI",
+    date: "Dec 2025",
+    category: "AI / Automation",
+    summary: `Clinical trial recruitment sounds straightforward: find eligible patients, enroll them. 
+    At Memorial Sloan Kettering (MSK), we designed an <strong>agentic AI service</strong> that uses an LLM to
+    contextualize protocol PDFs and evaluate incoming patients to determine whether their specimens are eligible 
+    for clinical trial research.
+`,
+    href: "/blog/agentic-clinical-trial-eligibility",
   },
 ];
 

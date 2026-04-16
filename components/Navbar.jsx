@@ -109,7 +109,7 @@ export default function Navbar() {
                     </li>
                     <li>
                       <Link
-                        href="#"
+                        href="https://fx-insights.jeffrey-ross.me/"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
                         <span>📝</span>

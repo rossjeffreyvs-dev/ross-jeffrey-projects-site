@@ -77,10 +77,14 @@ export default function Projects() {
               <span className="text-lg font-semibold">AI FX Insights</span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-2">
-              Lorem ipsum{" "}
+              AI FX Insights is an intelligent market analysis application that
+              delivers concise, real-time foreign exchange (FX) summaries using
+              large language models. It synthesizes macroeconomic signals,
+              currency movements, and market sentiment into actionable insights
+              for traders, analysts, and business stakeholders.
             </p>
             <Link
-              href="https://ai-fx-insights.jeffrey-ross.me"
+              href="https://fx-insights.jeffrey-ross.me"
               className="text-sm text-gray-800 dark:text-gray-300 hover:underline flex items-center"
             >
               View project description and live demo

@@ -9,38 +9,60 @@ export default function Contact() {
     email: "",
     message: "",
   });
+
   const [status, setStatus] = useState(null); // "sending" | "success" | "error"
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    setErrorMessage("");
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
       } else {
         setStatus("error");
+        setErrorMessage(
+          data?.error || "Please try again later or email me directly.",
+        );
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       setStatus("error");
+      setErrorMessage("Please try again later or email me directly.");
     }
   };
 
   useEffect(() => {
     if (status === "success" || status === "error") {
-      const timer = setTimeout(() => setStatus(null), 5000);
+      const timer = setTimeout(() => {
+        setStatus(null);
+        setErrorMessage("");
+      }, 5000);
+
       return () => clearTimeout(timer);
     }
   }, [status]);
@@ -70,7 +92,9 @@ export default function Contact() {
               onChange={handleChange}
               required
               className="contactField"
+              autoComplete="name"
             />
+
             <input
               type="email"
               name="email"
@@ -79,7 +103,9 @@ export default function Contact() {
               onChange={handleChange}
               required
               className="contactField"
+              autoComplete="email"
             />
+
             <textarea
               name="message"
               placeholder="Your Message"
@@ -113,16 +139,19 @@ export default function Contact() {
                 <span className="contactToastIcon" aria-hidden="true">
                   {status === "success" ? "✅" : "❌"}
                 </span>
+
                 <div>
                   <p className="contactToastTitle">
                     {status === "success"
                       ? "Message Sent!"
                       : "Something Went Wrong"}
                   </p>
+
                   <p className="contactToastText">
                     {status === "success"
                       ? "Thanks for reaching out — I’ll reply soon."
-                      : "Please try again later or email me directly."}
+                      : errorMessage ||
+                        "Please try again later or email me directly."}
                   </p>
                 </div>
               </div>

@@ -78,10 +78,10 @@ export default function Home() {
                   AI & Data Platform Leadership
                 </h3>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  Built enterprise-scale AI and data infrastructure at Memorial
-                  Sloan Kettering, integrating LIMS, Foundry, and GPT-5 to
-                  streamline research workflows and accelerate trial eligibility
-                  analysis.
+                  Built enterprise-scale biobanking operations, data
+                  infrastructure, and AI workflows at Memorial Sloan Kettering,
+                  integrating LIMS SaaS, Palantir Foundry, and GPT-5 to
+                  streamline research and accelerate trial eligibility analysis.
                 </p>
               </div>
               <div>

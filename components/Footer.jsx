@@ -55,15 +55,6 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-2">Social</h4>
           <ul className="space-y-1">
-            {/* <li>
-              <Link
-                href="https://github.com/rossjeffreyvs-dev?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </Link>
-            </li> */}
             <li>
               <Link
                 href="https://www.linkedin.com/in/jeffrey-ross1"
@@ -71,6 +62,15 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 LinkedIn
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://github.com/rossjeffreyvs-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
               </Link>
             </li>
           </ul>

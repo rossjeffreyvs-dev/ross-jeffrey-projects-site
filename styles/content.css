@@ -876,16 +876,144 @@ html.dark .profileBody {
 /* PRIMARY: View Projects                                                     */
 /* -------------------------------------------------------------------------- */
 
-.profileButtonPrimary {
-  background: #ffffff;
-  color: #2563eb; /* blue accent */
-  border: 1px solid #2563eb;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+/* -------------------------------------------------------------------------- */
+/* Projects page styles                                                       */
+/* -------------------------------------------------------------------------- */
+
+.projectsPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.profileButtonPrimary:hover {
-  background: #eff6ff; /* light blue */
-  transform: translateY(-1px);
+.projectsMain {
+  flex: 1;
+  padding-top: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.projectsHero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projectsTitle {
+  margin: 0 0 1.5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.projectCard:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+html.dark .projectCard {
+  background: #000000;
+  border-color: #1f2937;
+}
+
+html.dark .projectCard:hover {
+  background: #1f2937;
+}
+
+.projectCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.projectCardIcon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.projectCardTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+html.dark .projectCardTitle {
+  color: #f3f4f6;
+}
+
+.projectCardText {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+html.dark .projectCardText {
+  color: #9ca3af;
+}
+
+.projectLink {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.projectCard:hover .projectLink {
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
+html.dark .projectLink {
+  color: #f3f4f6;
 }
 
 /* -------------------------------------------------------------------------- */

@@ -9,7 +9,7 @@ export default function Home() {
 
       <main className="flex-grow pt-12">
         <section className="text-center px-4 py-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight">
             Where AI, Product Vision, and Engineering Meet
           </h1>
           <p className="mt-4 text-xl text-gray-600 dark:text-gray-400">
@@ -17,23 +17,23 @@ export default function Home() {
             From GPT-powered agents to enterprise-scale platforms — I build
             impactful tools that ship.
           </p>
-          <div className="mt-8 space-x-4">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               href="/projects"
-              className="px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+              className="w-full sm:w-auto max-w-[280px] text-center px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
               View Projects
             </Link>
             <Link
               href="/docs/jeffrey-ross-resume.pdf"
               target="_blank"
-              className="px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+              className="w-full sm:w-auto max-w-[280px] text-center px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
               View Résumé
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+              className="w-full sm:w-auto max-w-[280px] text-center px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
               Contact Me
             </Link>

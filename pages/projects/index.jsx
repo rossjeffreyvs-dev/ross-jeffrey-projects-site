@@ -32,6 +32,28 @@ export default function Projects() {
             </Link>
           </div>
 
+          {/* AI FX Insights */}
+          <div className="p-6 border rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 bg-white dark:bg-gray-900">
+            <div className="flex items-center mb-4 space-x-2">
+              <span className="text-xl font-bold">🎨</span>
+              <span className="text-lg font-semibold">AI FX Insights</span>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">
+              AI FX Insights is an intelligent market analysis application that
+              delivers concise, real-time foreign exchange (FX) summaries using
+              large language models. It synthesizes macroeconomic signals,
+              currency movements, and market sentiment into actionable insights
+              for traders, analysts, and business stakeholders.
+            </p>
+            <Link
+              href="https://fx-insights.jeffrey-ross.me"
+              className="text-sm text-gray-800 dark:text-gray-300 hover:underline flex items-center"
+            >
+              View project description and live demo
+              <span className="ml-1">→</span>
+            </Link>
+          </div>
+
           {/* Agentic Clinical Trial Eligibility */}
           <div className="p-6 border rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 bg-white dark:bg-gray-900">
             <div className="flex items-center mb-4 space-x-2">
@@ -52,6 +74,24 @@ export default function Projects() {
             </Link>
           </div>
 
+          {/* Semantic search */}
+          <div className="p-6 border rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 bg-white dark:bg-gray-900">
+            <div className="flex items-center mb-4 space-x-2">
+              <span className="text-lg font-bold">🛍️</span>
+              <span className="text-lg font-semibold">Semantic Search</span>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">
+              Lorem ipsum{" "}
+            </p>
+            <Link
+              href="#"
+              className="text-sm text-gray-800 dark:text-gray-300 hover:underline flex items-center"
+            >
+              View project description and live demo
+              <span className="ml-1">→</span>
+            </Link>
+          </div>
+
           {/* Claude Code */}
           <div className="p-6 border rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 bg-white dark:bg-gray-900">
             <div className="flex items-center mb-4 space-x-2">
@@ -63,28 +103,6 @@ export default function Projects() {
             </p>
             <Link
               href="https://ai-claude-code.jeffrey-ross.me"
-              className="text-sm text-gray-800 dark:text-gray-300 hover:underline flex items-center"
-            >
-              View project description and live demo
-              <span className="ml-1">→</span>
-            </Link>
-          </div>
-
-          {/* AI FX Insights */}
-          <div className="p-6 border rounded-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 bg-white dark:bg-gray-900">
-            <div className="flex items-center mb-4 space-x-2">
-              <span className="text-xl font-bold">🎨</span>
-              <span className="text-lg font-semibold">AI FX Insights</span>
-            </div>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
-              AI FX Insights is an intelligent market analysis application that
-              delivers concise, real-time foreign exchange (FX) summaries using
-              large language models. It synthesizes macroeconomic signals,
-              currency movements, and market sentiment into actionable insights
-              for traders, analysts, and business stakeholders.
-            </p>
-            <Link
-              href="https://fx-insights.jeffrey-ross.me"
               className="text-sm text-gray-800 dark:text-gray-300 hover:underline flex items-center"
             >
               View project description and live demo

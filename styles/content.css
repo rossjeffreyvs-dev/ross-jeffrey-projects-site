@@ -12,6 +12,136 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* -------------------------------------------------------------------------- */
+/* Home page styles                                                           */
+/* -------------------------------------------------------------------------- */
+
+.homePage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeMain {
+  flex: 1;
+  padding-top: 3rem;
+}
+
+.homeHero {
+  padding: 5rem 1rem;
+}
+
+.homeHeroInner {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homeTitle {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+html.dark .homeTitle {
+  color: #f9fafb;
+}
+
+.homeLead {
+  margin: 1rem auto 0;
+  max-width: 46rem;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+html.dark .homeLead {
+  color: #9ca3af;
+}
+
+.homeActions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.homeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 180px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #111827;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.homeButton:hover {
+  background: #f9fafb;
+  transform: translateY(-1px);
+}
+
+html.dark .homeButton {
+  background: transparent;
+  color: #f9fafb;
+  border-color: #f9fafb;
+}
+
+html.dark .homeButton:hover {
+  background: #111827;
+}
+
+@media (max-width: 768px) {
+  .homeHero {
+    padding: 4rem 1rem;
+  }
+
+  .homeTitle {
+    font-size: 2.4rem;
+    line-height: 1.08;
+  }
+
+  .homeLead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 640px) {
+  .homeActions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeButton {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeTitle {
+    font-size: 2rem;
+  }
+}
+
 /* Layout */
 .blogPage {
   min-height: 100vh;

@@ -4,39 +4,39 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="homePage min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100">
       <Navbar />
 
-      <main className="homeMain flex-grow">
-        <section className="homeHero">
-          <div className="homeHeroInner">
-            <h1 className="homeTitle">
-              Where AI, Product Vision, and Engineering Meet
-            </h1>
-
-            <p className="homeLead">
-              Bridging advanced AI research with real-world product execution.
-              From GPT-powered agents to enterprise-scale platforms — I build
-              impactful tools that ship.
-            </p>
-
-            <div className="homeActions">
-              <Link href="/projects" className="homeButton">
-                View Projects
-              </Link>
-
-              <Link
-                href="/docs/jeffrey-ross-resume.pdf"
-                target="_blank"
-                className="homeButton"
-              >
-                View Résumé
-              </Link>
-
-              <Link href="/contact" className="homeButton">
-                Contact Me
-              </Link>
-            </div>
+      <main className="flex-grow pt-12">
+        <section className="text-center px-4 py-16 max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-extrabold">
+            Where AI, Product Vision, and Engineering Meet
+          </h1>
+          <p className="mt-4 text-xl text-gray-600 dark:text-gray-400">
+            Bridging advanced AI research with real-world product execution.
+            From GPT-powered agents to enterprise-scale platforms — I build
+            impactful tools that ship.
+          </p>
+          <div className="mt-8 space-x-4">
+            <Link
+              href="/projects"
+              className="px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+            >
+              View Projects
+            </Link>
+            <Link
+              href="/docs/jeffrey-ross-resume.pdf"
+              target="_blank"
+              className="px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+            >
+              View Résumé
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-3 border border-black rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+            >
+              Contact Me
+            </Link>
           </div>
         </section>
 
@@ -67,7 +67,7 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
+        <section className="py-12 px-4">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold">
               Why Teams Build with Confidence

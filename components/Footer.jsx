@@ -22,7 +22,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 py-12 mt-20 text-sm text-gray-600 dark:text-gray-400">
+    <footer className="bg-gray-100 dark:bg-gray-900 py-8 mt-20 text-sm text-gray-600 dark:text-gray-400">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
         <div>
           <h4 className="font-semibold mb-2">Work</h4>

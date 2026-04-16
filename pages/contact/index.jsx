@@ -8,8 +8,8 @@ export default function Contact() {
     name: "",
     email: "",
     message: "",
+    company: "",
   });
-
   const [status, setStatus] = useState(null); // "sending" | "success" | "error"
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -42,6 +42,7 @@ export default function Contact() {
           name: "",
           email: "",
           message: "",
+          company: "",
         });
       } else {
         setStatus("error");
@@ -104,6 +105,17 @@ export default function Contact() {
               required
               className="contactField"
               autoComplete="email"
+            />
+
+            <input
+              type="text"
+              name="company"
+              value={formData.company || ""}
+              onChange={handleChange}
+              className="contactHoneypot"
+              autoComplete="off"
+              tabIndex={-1}
+              aria-hidden="true"
             />
 
             <textarea

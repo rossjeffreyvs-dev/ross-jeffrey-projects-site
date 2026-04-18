@@ -36,33 +36,21 @@ function isRateLimited(ip) {
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res
-      .status(405)
-      .json({ success: false, error: "Method not allowed" });
-  }
-
-  const ip = getClientIp(req);
-
-  if (isRateLimited(ip)) {
-    return res.status(429).json({
+    return res.status(405).json({
       success: false,
-      error: "Too many requests. Please wait a minute and try again.",
+      error: "Method not allowed",
     });
   }
 
   try {
-    const { name, email, message, company } = req.body;
-
-    // Honeypot spam protection
-    if (company) {
-      return res.status(200).json({ success: true });
+    if (!process.env.GOOGLE_SCRIPT_URL) {
+      throw new Error("Missing GOOGLE_SCRIPT_URL");
     }
 
-    if (!process.env.GOOGLE_SCRIPT_URL) {
-      return res.status(500).json({
-        success: false,
-        error: "Missing GOOGLE_SCRIPT_URL",
-      });
+    const { name, email, message, company } = req.body || {};
+
+    if (company) {
+      return res.status(200).json({ success: true });
     }
 
     const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
@@ -71,7 +59,6 @@ export default async function handler(req, res) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ name, email, message }),
-      redirect: "follow",
     });
 
     const text = await response.text();
@@ -84,10 +71,14 @@ export default async function handler(req, res) {
     }
 
     if (!response.ok) {
+      console.error("Google script failed:", {
+        status: response.status,
+        body: data,
+      });
+
       return res.status(500).json({
         success: false,
         error: data.error || "Google script request failed",
-        details: data,
       });
     }
 
@@ -96,7 +87,11 @@ export default async function handler(req, res) {
       data,
     });
   } catch (error) {
-    console.error("Contact API error:", error);
+    console.error("Contact API error:", {
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+    });
+
     return res.status(500).json({
       success: false,
       error: "Server error while sending message",

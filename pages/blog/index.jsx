@@ -22,7 +22,7 @@ const posts = [
     href: "/blog/ontology-vs-cdm-biobanking",
   },
   {
-    title: "Concordance testing.",
+    title: "Concordance Testing",
     date: "Nov 2025",
     category: "Enterprise Data Platforms",
     summary: `Concordance testing is the backbone of trustworthy data migrations and integrations—especially 
@@ -35,11 +35,22 @@ const posts = [
     date: "Dec 2025",
     category: "AI / Automation",
     summary: `Clinical trial recruitment sounds straightforward: find eligible patients, enroll them. 
-    At Memorial Sloan Kettering (MSK), we designed an <strong>agentic AI service</strong> that uses an LLM to
+    At Memorial Sloan Kettering (MSK), we designed an agentic AI service that uses an LLM to
     contextualize protocol PDFs and evaluate incoming patients to determine whether their specimens are eligible 
     for clinical trial research.
 `,
     href: "/blog/agentic-clinical-trial-eligibility",
+  },
+  {
+    title: "Semantic Search",
+    date: "Jan 2026",
+    category: "Engineering",
+    summary: `AI-powered search tool that enables natural language queries
+              across patient and clinical data. Using embeddings and vector
+              similarity, it identifies relevant patients based on meaning—not
+              just keywords—supporting faster cohort discovery and data
+              exploration.`,
+    href: "/blog/semantic-patient-search",
   },
 ];
 
@@ -55,7 +66,7 @@ export default function Blog() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow pt-24 px-4 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6">Blog</h1>
+        {/* <h1 className="text-4xl font-bold mb-6">Blog</h1> */}
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-4 mb-10">

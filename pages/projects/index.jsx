@@ -21,9 +21,12 @@ export default function Projects() {
               <h2 className="projectCardTitle">AI Résumé Match</h2>
             </div>
             <p className="projectCardText">
-              Upload a résumé and job description to see matched skills, gaps,
-              and suggestions. Demo runs as a Dockerized app on AWS Lightsail
-              and is embedded here via proxy.
+              AI-powered application that evaluates how well a résumé aligns
+              with a job description. It analyzes skills, experience, and
+              qualifications to highlight matches, identify gaps, and provide
+              actionable suggestions. Built with LLMs and deployed as a
+              Dockerized service on AWS Lightsail, the app demonstrates
+              real-time document analysis and AI-assisted career insights.{" "}
             </p>
             <span className="projectLink">
               View project description and live demo →
@@ -66,12 +69,21 @@ export default function Projects() {
             </span>
           </Link>
 
-          <Link href="#" className="projectCard">
+          <Link
+            href="https://semantic-patient-search.jeffrey-ross.me/"
+            className="projectCard"
+          >
             <div className="projectCardHeader">
               <span className="projectCardIcon">🛍️</span>
               <h2 className="projectCardTitle">Semantic Search</h2>
             </div>
-            <p className="projectCardText">Lorem ipsum</p>
+            <p className="projectCardText">
+              AI-powered search tool that enables natural language queries
+              across patient and clinical data. Using embeddings and vector
+              similarity, it identifies relevant patients based on meaning—not
+              just keywords—supporting faster cohort discovery and data
+              exploration.
+            </p>
             <span className="projectLink">
               View project description and live demo →
             </span>

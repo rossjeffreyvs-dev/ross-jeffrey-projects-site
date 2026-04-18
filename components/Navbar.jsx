@@ -88,7 +88,7 @@ export default function Navbar() {
                         <div>
                           <p className="font-semibold">Main</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
-                            List of sample projects
+                            List of portfolio projects
                           </p>
                         </div>
                       </Link>
@@ -117,6 +117,21 @@ export default function Navbar() {
                           <p className="font-semibold">AI FX Insights</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             Foreign exchange client report
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="https://semantic-patient-search.jeffrey-ross.me/"
+                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
+                      >
+                        <span>📝</span>
+                        <div>
+                          <p className="font-semibold">Semantic Search</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            Semantic patient search for research discovery
                           </p>
                         </div>
                       </Link>

@@ -58,6 +58,13 @@ export default async function handler(req, res) {
       return res.status(200).json({ success: true });
     }
 
+    if (!process.env.GOOGLE_SCRIPT_URL) {
+      return res.status(500).json({
+        success: false,
+        error: "Missing GOOGLE_SCRIPT_URL",
+      });
+    }
+
     const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
       method: "POST",
       headers: {

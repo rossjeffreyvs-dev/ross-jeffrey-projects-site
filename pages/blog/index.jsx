@@ -1,110 +1,85 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Link from "next/link";
-import { useState } from "react";
-
-const categories = [
-  "All Posts",
-  "AI / Automation",
-  "Enterprise Data Platforms",
-  "Engineering",
-];
 
 const posts = [
   {
-    title: "Common Data Model (CDM)",
-    date: "Oct 2025",
-    category: "Enterprise Data Platforms",
-    summary: `Modern biobanking is not just about storing specimens — it’s about structuring data so research is 
-      discoverable, reproducible, and scalable. At Memorial Sloan Kettering (MSK), we designed a shared 
-      Common Data Model (CDM) across multiple biobanks and layered an ontology in Palantir Foundry to power 
-      cross-biobank search and specimen discovery for cancer research investigators.`,
-    href: "/blog/ontology-vs-cdm-biobanking",
-  },
-  {
-    title: "Concordance Testing",
-    date: "Nov 2025",
-    category: "Enterprise Data Platforms",
-    summary: `Concordance testing is the backbone of trustworthy data migrations and integrations—especially 
-    in regulated clinical research environments. At Memorial Sloan Kettering (MSK), we used concordance testing 
-    to validate a large-scale migration and daily synchronization.`,
-    href: "/blog/concordance-testing",
-  },
-  {
-    title: "Agentic AI",
-    date: "Dec 2025",
-    category: "AI / Automation",
-    summary: `Clinical trial recruitment sounds straightforward: find eligible patients, enroll them. 
-    At Memorial Sloan Kettering (MSK), we designed an agentic AI service that uses an LLM to
-    contextualize protocol PDFs and evaluate incoming patients to determine whether their specimens are eligible 
-    for clinical trial research.
-`,
+    title: "Agentic Clinical Trial Eligibility",
+    icon: "🧬",
+    date: "Feb 2026",
+    summary:
+      "Clinical trial matching sounds straightforward until real patient records, protocol ambiguity, and incomplete evidence enter the workflow. This post explores an agentic clinical trial eligibility system that stages retrieval, criteria evaluation, reasoning, and human review to produce transparent, explainable recommendations.",
     href: "/blog/agentic-clinical-trial-eligibility",
   },
   {
     title: "Semantic Search",
+    icon: "🔎",
     date: "Jan 2026",
-    category: "Engineering",
-    summary: `AI-powered search tool that enables natural language queries
-              across patient and clinical data. Using embeddings and vector
-              similarity, it identifies relevant patients based on meaning—not
-              just keywords—supporting faster cohort discovery and data
-              exploration.`,
+    summary:
+      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords—supporting faster cohort discovery and data exploration.",
     href: "/blog/semantic-patient-search",
+  },
+  {
+    title: "Common Data Model",
+    icon: "🧩",
+    date: "Oct 2025",
+    summary:
+      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is discoverable, reproducible, and scalable. At Memorial Sloan Kettering (MSK), we designed a shared Common Data Model (CDM) across multiple biobanks and layered an ontology in Palantir Foundry to power cross-biobank search and specimen discovery for cancer research investigators.",
+    href: "/blog/ontology-vs-cdm-biobanking",
+  },
+  {
+    title: "Concordance Testing",
+    icon: "⚖️",
+    date: "Nov 2025",
+    summary:
+      "Concordance testing is the backbone of trustworthy data migrations and integrations—especially in regulated clinical research environments. At Memorial Sloan Kettering (MSK), we used concordance testing to validate a large-scale migration and daily synchronization.",
+    href: "/blog/concordance-testing",
   },
 ];
 
 export default function Blog() {
-  const [selected, setSelected] = useState("All Posts");
-
-  const filtered =
-    selected === "All Posts"
-      ? posts
-      : posts.filter((post) => post.category === selected);
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="blogIndexPage">
       <Navbar />
-      <main className="flex-grow pt-24 px-4 max-w-5xl mx-auto">
-        {/* <h1 className="text-4xl font-bold mb-6">Blog</h1> */}
 
-        {/* Tabs */}
-        <div className="flex flex-wrap gap-4 mb-10">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelected(cat)}
-              className={
-                selected === cat
-                  ? "px-4 py-2 rounded-full bg-black text-white dark:bg-white dark:text-black"
-                  : "px-4 py-2 rounded-full text-gray-600 hover:text-black dark:hover:text-white border"
-              }
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+      <main className="blogIndexMain">
+        <header className="blogIndexHeader">
+          <p className="blogIndexEyebrow">Writing</p>
+          <h1 className="blogIndexTitle">
+            Notes on AI, data platforms, and product engineering
+          </h1>
+          <p className="blogIndexIntro">
+            A collection of essays and project write-ups focused on clinical AI,
+            enterprise data systems, workflow design, and applied engineering.
+          </p>
+        </header>
 
-        {/* Blog cards */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {filtered.map(({ title, date, summary, href }, idx) => (
-            <article
-              key={idx}
-              className="p-6 border rounded hover:shadow-lg transition bg-white dark:bg-gray-900"
-            >
-              <p className="text-sm text-gray-500 mb-2">{date}</p>
-              <h2 className="text-xl font-semibold mb-2">
-                <Link href={href} className="hover:underline">
-                  {title}
+        <section className="blogIndexGrid" aria-label="Blog posts">
+          {posts.map(({ title, icon, date, summary, href }) => (
+            <article key={href} className="blogIndexCard">
+              {/* <p className="blogIndexDate">{date}</p> */}
+
+              <h2 className="blogIndexCardTitle">
+                <Link href={href} className="blogIndexCardLink">
+                  <span className="blogIndexCardIcon" aria-hidden="true">
+                    {icon}
+                  </span>
+                  <span>{title}</span>
                 </Link>
               </h2>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                {summary}
-              </p>
+
+              <p className="blogIndexSummary">{summary}</p>
+
+              <div className="blogIndexCardFooter">
+                <Link href={href} className="blogIndexReadMore">
+                  Read post <span aria-hidden="true">→</span>
+                </Link>
+              </div>
             </article>
           ))}
-        </div>
+        </section>
       </main>
+
       <Footer />
     </div>
   );

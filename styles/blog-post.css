@@ -1,12 +1,16 @@
-
 /* styles/blog-post.css
    Blog post layout styles (reference styles for blog pages)
    Intended to replace per-element Tailwind utility classes in blog post JSX.
 */
 
-:root { color-scheme: light dark; }
+:root {
+  color-scheme: light dark;
+}
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -14,51 +18,284 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Layout */
-.blogPage {
+/* -------------------------------------------------------------------------- */
+/* Shared blog layout                                                         */
+/* -------------------------------------------------------------------------- */
+
+.blogPage,
+.blogIndexPage {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.blogMain {
+.blogMain,
+.blogIndexMain {
   flex-grow: 1;
-  padding-top: 6rem;   /* pt-24 */
-  padding-left: 1rem;  /* px-4 */
-  padding-right: 1rem; /* px-4 */
-  max-width: 48rem;    /* max-w-3xl */
+  width: 100%;
+  padding-top: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
 }
 
-/* Title + meta */
+@media (min-width: 768px) {
+  .blogMain,
+  .blogIndexMain {
+    max-width: 56rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blogMain,
+  .blogIndexMain {
+    max-width: 64rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .blogMain,
+  .blogIndexMain {
+    max-width: 72rem;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Blog index                                                                 */
+/* -------------------------------------------------------------------------- */
+
+.blogIndexHeader {
+  max-width: 1040px;
+  margin-bottom: 2.5rem;
+}
+
+.blogIndexEyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.blogIndexTitle {
+  margin: 0;
+  max-width: 980px;
+  font-size: 3rem;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  color: #111827;
+}
+
+html.dark .blogIndexTitle {
+  color: #f9fafb;
+}
+
+.blogIndexIntro {
+  margin: 1.1rem 0 0;
+  max-width: 980px;
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+html.dark .blogIndexIntro {
+  color: #9ca3af;
+}
+
+.blogIndexGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.blogIndexCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.02);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.blogIndexCard:hover {
+  transform: translateY(-2px);
+  border-color: #dbe4f0;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+html.dark .blogIndexCard {
+  background: #111827;
+  border-color: #1f2937;
+  box-shadow: none;
+}
+
+html.dark .blogIndexCard:hover {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.blogIndexDate {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #6b7280;
+}
+
+html.dark .blogIndexDate {
+  color: #9ca3af;
+}
+
+.blogIndexCardTitle {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.blogIndexCardLink {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: #111827;
+  text-decoration: none;
+}
+
+.blogIndexCardLink:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+html.dark .blogIndexCardLink {
+  color: #f9fafb;
+}
+
+.blogIndexCardIcon {
+  flex: 0 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  transform: translateY(0.08rem);
+}
+
+.blogIndexSummary {
+  margin: 1rem 0 0;
+  color: #4b5563;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+html.dark .blogIndexSummary {
+  color: #9ca3af;
+}
+
+.blogIndexCardFooter {
+  margin-top: auto;
+  padding-top: 1.4rem;
+}
+
+.blogIndexReadMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+  transition: transform 160ms ease;
+}
+
+.blogIndexReadMore:hover {
+  text-decoration: underline;
+}
+
+.blogIndexCard:hover .blogIndexReadMore {
+  transform: translateX(2px);
+}
+
+html.dark .blogIndexReadMore {
+  color: #f9fafb;
+}
+
+@media (min-width: 768px) {
+  .blogIndexGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .blogIndexGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .blogIndexTitle {
+    font-size: 2.2rem;
+    line-height: 1.08;
+  }
+
+  .blogIndexIntro {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .blogIndexCard {
+    min-height: unset;
+  }
+
+  .blogIndexCardTitle {
+    font-size: 1.45rem;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Blog post                                                                  */
+/* -------------------------------------------------------------------------- */
+
 .blogTitle {
-  font-size: 2.25rem;  /* text-4xl */
+  font-size: 2.25rem;
   line-height: 2.5rem;
-  font-weight: 700;    /* font-bold */
+  font-weight: 700;
   margin: 0;
 }
 
 .blogMeta {
-  margin-top: 1rem;    /* mt-4 */
-  color: #6b7280;      /* text-gray-500 */
+  margin-top: 1rem;
+  color: #6b7280;
   font-size: 1rem;
 }
 
-/* Prose section (mirrors `mt-8 space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300`) */
 .blogProse {
-  margin-top: 2rem;              /* mt-8 */
-  font-size: 1.125rem;           /* text-lg */
-  line-height: 1.75;             /* leading-relaxed */
-  color: #374151;                /* text-gray-700 */
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;                   /* space-y-6 */
+  gap: 1.5rem;
 }
 
-html.dark .blogProse { color: #d1d5db; } /* dark:text-gray-300 */
+html.dark .blogProse {
+  color: #d1d5db;
+}
 
-/* Headings inside prose */
 .blogProse h2 {
   margin: 2.25rem 0 0.75rem;
   font-size: 1.5rem;
@@ -66,7 +303,10 @@ html.dark .blogProse { color: #d1d5db; } /* dark:text-gray-300 */
   font-weight: 700;
   color: #111827;
 }
-html.dark .blogProse h2 { color: #f9fafb; }
+
+html.dark .blogProse h2 {
+  color: #f9fafb;
+}
 
 .blogProse h3 {
   margin: 1.75rem 0 0.5rem;
@@ -75,46 +315,480 @@ html.dark .blogProse h2 { color: #f9fafb; }
   font-weight: 700;
   color: #111827;
 }
-html.dark .blogProse h3 { color: #f9fafb; }
 
-.blogProse p { margin: 0; }
+html.dark .blogProse h3 {
+  color: #f9fafb;
+}
 
-/* Lists */
+.blogProse p {
+  margin: 0;
+}
+
 .blogProse ul {
   margin: 0;
   padding-left: 1.25rem;
   list-style: disc;
 }
-.blogProse li { margin: 0.5rem 0; }
 
-/* Callout / note */
+.blogProse li {
+  margin: 0.5rem 0;
+}
+
 .blogCallout {
-  border: 1px solid rgba(229,231,235,1);
-  background: rgba(249,250,251,1);
+  border: 1px solid rgba(229, 231, 235, 1);
+  background: rgba(249, 250, 251, 1);
   border-radius: 1rem;
   padding: 1rem;
   font-size: 1rem;
   color: #374151;
 }
+
 html.dark .blogCallout {
-  border-color: rgba(31,41,55,1);
-  background: rgba(17,24,39,1);
+  border-color: rgba(31, 41, 55, 1);
+  background: rgba(17, 24, 39, 1);
   color: #e5e7eb;
 }
 
-/* Images */
-.blogFigure { margin: 0; }
+.blogFigure {
+  margin: 0;
+}
+
 .blogFigure img {
   width: 100%;
   border-radius: 1rem;
-  border: 1px solid rgba(229,231,235,1);
+  border: 1px solid rgba(229, 231, 235, 1);
   display: block;
 }
-html.dark .blogFigure img { border-color: rgba(31,41,55,1); }
+
+html.dark .blogFigure img {
+  border-color: rgba(31, 41, 55, 1);
+}
 
 .blogCaption {
   margin-top: 0.5rem;
   font-size: 0.95rem;
   color: #6b7280;
 }
-html.dark .blogCaption { color: #9ca3af; }
+
+html.dark .blogCaption {
+  color: #9ca3af;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Trial diagrams                                                             */
+/* -------------------------------------------------------------------------- */
+
+.trialDiagramFigure {
+  margin: 2.25rem 0 2.5rem;
+}
+
+.trialDiagramSurface {
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f8fafc 100%);
+  padding: 2.5rem 2rem;
+  overflow: hidden;
+}
+
+.trialDiagramTitle {
+  margin: 0 0 1.75rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #172554;
+}
+
+.trialDiagramEyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.trialDiagramCard {
+  border: 1px solid #dbe4f0;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 1px 1px rgba(15, 23, 42, 0.03),
+    0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+/* workflow */
+.trialWorkflowGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 56px 1fr 56px 1.35fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trialWorkflowInputGroup,
+.trialWorkflowEngine,
+.trialWorkflowOutputGroup {
+  padding: 1.25rem;
+  min-height: 320px;
+}
+
+.trialWorkflowInputStack,
+.trialWorkflowOutputStack,
+.trialWorkflowEngineStack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.trialWorkflowMiniCard,
+.trialWorkflowStep,
+.trialWorkflowDecisionCard,
+.trialWorkflowEvidenceCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.trialWorkflowMiniCard {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.trialWorkflowMiniIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  background: #eef4ff;
+}
+
+.trialWorkflowMiniTitle,
+.trialWorkflowEvidenceTitle,
+.trialHitlNodeTitle,
+.trialSystemLayerTitle,
+.trialArchitectureAgentTitle,
+.trialArchitectureOrchestratorTitle,
+.trialHitlCenterTitle {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.trialWorkflowMiniText,
+.trialArchitectureAgentText,
+.trialArchitectureOrchestratorText,
+.trialSystemLayerText,
+.trialHitlCenterText,
+.trialHitlNodeText,
+.trialWorkflowDecisionBody,
+.trialWorkflowEvidenceList {
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: #475569;
+}
+
+.trialWorkflowStep {
+  padding: 0.95rem 1rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.trialWorkflowConnector {
+  display: flex;
+  justify-content: center;
+}
+
+.trialDiagramArrow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trialDiagramArrowLine {
+  width: 22px;
+  height: 2px;
+  background: #7aa2f7;
+  border-radius: 999px;
+}
+
+.trialDiagramArrowHead {
+  margin-left: 0.15rem;
+  color: #4f7fe8;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.trialWorkflowDecisionCard,
+.trialWorkflowEvidenceCard {
+  padding: 1rem;
+}
+
+.trialWorkflowDecisionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.trialWorkflowDecisionPill {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 0.32rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #166534;
+  background: #e8f7ee;
+  border: 1px solid #cfead9;
+}
+
+.trialWorkflowEvidenceList {
+  margin: 0.55rem 0 0;
+  padding-left: 1.1rem;
+}
+
+/* architecture */
+.trialArchitectureWrap {
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.trialArchitectureTop {
+  display: flex;
+  justify-content: center;
+}
+
+.trialArchitectureOrchestrator {
+  width: min(420px, 100%);
+  padding: 1.15rem 1.25rem;
+  text-align: center;
+}
+
+.trialArchitectureLines {
+  position: relative;
+  width: min(760px, 100%);
+  margin: 1.2rem auto 1rem;
+  height: 52px;
+}
+
+.trialArchitectureLines::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 24px;
+  background: #9bb8ff;
+  transform: translateX(-50%);
+}
+
+.trialArchitectureLines::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  width: 66%;
+  height: 2px;
+  background: #9bb8ff;
+  transform: translateX(-50%);
+}
+
+.trialArchitectureBottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.trialArchitectureAgent {
+  position: relative;
+  padding: 1.1rem;
+  text-align: center;
+}
+
+.trialArchitectureAgent::before {
+  content: "";
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  width: 2px;
+  height: 27px;
+  background: #9bb8ff;
+  transform: translateX(-50%);
+}
+
+.trialArchitectureAgentIcon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.8rem;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  background: #eef4ff;
+}
+
+/* system */
+.trialSystemStack {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.trialSystemLayer {
+  padding: 1rem 1.15rem;
+}
+
+.trialSystemLayer + .trialSystemArrow {
+  margin: 0.35rem 0;
+}
+
+.trialSystemLayerLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.45rem;
+}
+
+.trialSystemArrow {
+  text-align: center;
+  color: #5b86ee;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* hitl */
+.trialHitlWrap {
+  position: relative;
+  width: min(780px, 100%);
+  height: 470px;
+  margin: 0 auto;
+}
+
+.trialHitlCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 270px;
+  padding: 1.2rem;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.trialHitlNode {
+  position: absolute;
+  width: 220px;
+  padding: 1rem;
+  z-index: 3;
+}
+
+.trialHitlNode.topRight {
+  top: 18px;
+  right: 28px;
+}
+
+.trialHitlNode.bottomRight {
+  bottom: 18px;
+  right: 28px;
+}
+
+.trialHitlNode.bottomLeft {
+  bottom: 18px;
+  left: 28px;
+}
+
+.trialHitlNode.topLeft {
+  top: 18px;
+  left: 28px;
+}
+
+.trialHitlLoop {
+  position: absolute;
+  border: 2px dashed #9bb8ff;
+  border-radius: 999px;
+  z-index: 1;
+}
+
+.trialHitlLoop.loopTop {
+  top: 90px;
+  left: 160px;
+  width: 460px;
+  height: 110px;
+  border-bottom: none;
+}
+
+.trialHitlLoop.loopRight {
+  top: 120px;
+  right: 110px;
+  width: 120px;
+  height: 230px;
+  border-left: none;
+}
+
+.trialHitlLoop.loopBottom {
+  bottom: 90px;
+  left: 160px;
+  width: 460px;
+  height: 110px;
+  border-top: none;
+}
+
+.trialHitlLoop.loopLeft {
+  top: 120px;
+  left: 110px;
+  width: 120px;
+  height: 230px;
+  border-right: none;
+}
+
+/* responsive */
+@media (max-width: 1080px) {
+  .trialWorkflowGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trialWorkflowConnector {
+    display: none;
+  }
+
+  .trialWorkflowInputGroup,
+  .trialWorkflowEngine,
+  .trialWorkflowOutputGroup {
+    min-height: unset;
+  }
+
+  .trialArchitectureBottom {
+    grid-template-columns: 1fr;
+  }
+
+  .trialArchitectureAgent::before,
+  .trialArchitectureLines {
+    display: none;
+  }
+
+  .trialHitlWrap {
+    height: auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .trialHitlCenter,
+  .trialHitlNode {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .trialHitlLoop {
+    display: none;
+  }
+}

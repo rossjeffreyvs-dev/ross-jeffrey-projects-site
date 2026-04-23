@@ -15,8 +15,8 @@ export default function Navbar() {
 
   const linkClass = (path) =>
     router.pathname === path
-      ? "text-black dark:text-white font-semibold border-b-2 border-black dark:border-white"
-      : "text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white";
+      ? "text-[1.05rem] text-black dark:text-white font-semibold border-b-2 border-black dark:border-white"
+      : "text-[1.05rem] text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white font-medium";
 
   const toggleMobileSection = (section) => {
     setMobileOpen((prev) => ({
@@ -84,7 +84,7 @@ export default function Navbar() {
                         href="/projects"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
-                        <span>📣</span>
+                        <span className="mr-2">🗂️</span>
                         <div>
                           <p className="font-semibold">Main</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -93,12 +93,44 @@ export default function Navbar() {
                         </div>
                       </Link>
                     </li>
+
+                    <li>
+                      <Link
+                        href="https://clinical-trial-patient-agent.jeffrey-ross.me"
+                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
+                      >
+                        <span className="mr-2">🧬</span>
+                        <div>
+                          <p className="font-semibold">
+                            Agentic Clinical Trials
+                          </p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            AI-driven patient eligibility for clinical trials
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://semantic-patient-search.jeffrey-ross.me/"
+                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
+                      >
+                        <span className="mr-2">🔍</span>
+                        <div>
+                          <p className="font-semibold">Semantic Search</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            Semantic patient search for research discovery
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+
                     <li>
                       <Link
                         href="https://resume-analyzer.jeffrey-ross.me"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
-                        <span>📣</span>
+                        <span className="mr-2">📄</span>
                         <div>
                           <p className="font-semibold">AI Résumé Match</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -112,26 +144,12 @@ export default function Navbar() {
                         href="https://fx-insights.jeffrey-ross.me/"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
-                        <span>📝</span>
+                        <span className="mr-2">📈</span>
+
                         <div>
                           <p className="font-semibold">AI FX Insights</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             Foreign exchange client report
-                          </p>
-                        </div>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        href="https://semantic-patient-search.jeffrey-ross.me/"
-                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
-                      >
-                        <span>📝</span>
-                        <div>
-                          <p className="font-semibold">Semantic Search</p>
-                          <p className="text-sm text-gray-500 dark:text-gray-400">
-                            Semantic patient search for research discovery
                           </p>
                         </div>
                       </Link>

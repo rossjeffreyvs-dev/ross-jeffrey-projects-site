@@ -233,6 +233,39 @@ html.dark .blogIndexReadMore {
   color: #f9fafb;
 }
 
+.blogIndexCardLinkWrapper {
+  cursor: pointer;
+}
+
+.blogIndexCardLinkWrapper:focus-visible .blogIndexCard {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.blogIndexCard {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.blogIndexCard:hover {
+  transform: translateY(-4px);
+  border-color: #dbe4f0;
+  background-color: #f9fafb; /* subtle gray */
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.blogIndexCard:hover .blogIndexCardIcon {
+  transform: translateY(-1px);
+}
+
+html.dark .blogIndexCard:hover {
+  background-color: #0f172a;
+  border-color: #334155;
+}
+
 @media (min-width: 768px) {
   .blogIndexGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

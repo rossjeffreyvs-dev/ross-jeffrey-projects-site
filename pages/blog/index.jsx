@@ -24,7 +24,7 @@ const posts = [
     icon: "🧩",
     date: "Oct 2025",
     summary:
-      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is discoverable, reproducible, and scalable. At Memorial Sloan Kettering (MSK), we designed a shared Common Data Model (CDM) across multiple biobanks and layered an ontology in Palantir Foundry to power cross-biobank search and specimen discovery for cancer research investigators.",
+      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is discoverable, reproducible, and scalable.",
     href: "/blog/ontology-vs-cdm-biobanking",
   },
   {
@@ -32,7 +32,7 @@ const posts = [
     icon: "⚖️",
     date: "Nov 2025",
     summary:
-      "Concordance testing is the backbone of trustworthy data migrations and integrations—especially in regulated clinical research environments. At Memorial Sloan Kettering (MSK), we used concordance testing to validate a large-scale migration and daily synchronization.",
+      "Concordance testing is the backbone of trustworthy data migrations and integrations in regulated clinical environments.",
     href: "/blog/concordance-testing",
   },
 ];
@@ -55,27 +55,23 @@ export default function Blog() {
         </header>
 
         <section className="blogIndexGrid" aria-label="Blog posts">
-          {posts.map(({ title, icon, date, summary, href }) => (
-            <article key={href} className="blogIndexCard">
-              {/* <p className="blogIndexDate">{date}</p> */}
-
-              <h2 className="blogIndexCardTitle">
-                <Link href={href} className="blogIndexCardLink">
-                  <span className="blogIndexCardIcon" aria-hidden="true">
-                    {icon}
-                  </span>
+          {posts.map(({ title, icon, summary, href }) => (
+            <Link key={href} href={href} className="blogIndexCardLinkWrapper">
+              <article className="blogIndexCard">
+                <h2 className="blogIndexCardTitle">
+                  <span className="blogIndexCardIcon">{icon}</span>
                   <span>{title}</span>
-                </Link>
-              </h2>
+                </h2>
 
-              <p className="blogIndexSummary">{summary}</p>
+                <p className="blogIndexSummary">{summary}</p>
 
-              <div className="blogIndexCardFooter">
-                <Link href={href} className="blogIndexReadMore">
-                  Read post <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            </article>
+                <div className="blogIndexCardFooter">
+                  <span className="blogIndexReadMore">
+                    Read post <span>→</span>
+                  </span>
+                </div>
+              </article>
+            </Link>
           ))}
         </section>
       </main>

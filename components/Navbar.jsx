@@ -315,7 +315,7 @@ export default function Navbar() {
                   </svg>
                 </button>
 
-                {mobileOpen.projects && (
+                {/* {mobileOpen.projects && (
                   <div className="mt-3 pl-4 space-y-3">
                     <Link
                       href="/projects"
@@ -349,7 +349,7 @@ export default function Navbar() {
                       </div>
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
 
               {/* Blog direct link */}
@@ -389,7 +389,7 @@ export default function Navbar() {
                   </svg>
                 </button>
 
-                {mobileOpen.about && (
+                {/* {mobileOpen.about && (
                   <div className="mt-3 pl-4 space-y-3">
                     <Link
                       href="/profile"
@@ -423,7 +423,7 @@ export default function Navbar() {
                       </div>
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
 
               {/* Contact */}

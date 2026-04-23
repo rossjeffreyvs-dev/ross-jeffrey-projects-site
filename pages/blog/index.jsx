@@ -6,33 +6,41 @@ const posts = [
   {
     title: "Agentic Clinical Trial Eligibility",
     icon: "🧬",
-    date: "Feb 2026",
     summary:
-      "Clinical trial matching sounds straightforward until real patient records, protocol ambiguity, and incomplete evidence enter the workflow. This post explores an agentic clinical trial eligibility system that stages retrieval, criteria evaluation, reasoning, and human review to produce transparent, explainable recommendations.",
+      "Clinical trial recruitment sounds straightforward: find eligible patients, enroll them. \
+    At Memorial Sloan Kettering (MSK), we designed an agentic AI service that uses an LLM to \
+    contextualize protocol PDFs and evaluate incoming patients to determine whether their specimens are eligible \
+    for clinical trial research.",
     href: "/blog/agentic-clinical-trial-eligibility",
   },
   {
     title: "Semantic Search",
     icon: "🔎",
-    date: "Jan 2026",
     summary:
-      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords—supporting faster cohort discovery and data exploration.",
+      "AI-powered search tool that enables natural language queries \
+      across patient and clinical data. Using embeddings and vector \
+      similarity, it identifies relevant patients based on meaning—not \
+      just keywords—supporting faster cohort discovery and data \
+      exploration.",
     href: "/blog/semantic-patient-search",
   },
   {
     title: "Common Data Model",
     icon: "🧩",
-    date: "Oct 2025",
     summary:
-      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is discoverable, reproducible, and scalable.",
+      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is \
+      discoverable, reproducible, and scalable. At Memorial Sloan Kettering (MSK), we designed a shared \
+      Common Data Model (CDM) across multiple biobanks and layered an ontology in Palantir Foundry to power \
+      cross-biobank search and specimen discovery for cancer research investigators.",
     href: "/blog/ontology-vs-cdm-biobanking",
   },
   {
     title: "Concordance Testing",
     icon: "⚖️",
-    date: "Nov 2025",
     summary:
-      "Concordance testing is the backbone of trustworthy data migrations and integrations in regulated clinical environments.",
+      "Concordance testing is the backbone of trustworthy data migrations and integrations—especially \
+    in regulated clinical research environments. At Memorial Sloan Kettering (MSK), we used concordance testing \
+    to validate a large-scale migration and daily synchronization.",
     href: "/blog/concordance-testing",
   },
 ];
@@ -58,16 +66,18 @@ export default function Blog() {
           {posts.map(({ title, icon, summary, href }) => (
             <Link key={href} href={href} className="blogIndexCardLinkWrapper">
               <article className="blogIndexCard">
-                <h2 className="blogIndexCardTitle">
-                  <span className="blogIndexCardIcon">{icon}</span>
-                  <span>{title}</span>
-                </h2>
+                <div className="blogIndexCardHeader">
+                  <span className="blogIndexCardIcon" aria-hidden="true">
+                    {icon}
+                  </span>
+                  <h2 className="blogIndexCardTitle">{title}</h2>
+                </div>
 
                 <p className="blogIndexSummary">{summary}</p>
 
                 <div className="blogIndexCardFooter">
                   <span className="blogIndexReadMore">
-                    Read post <span>→</span>
+                    Read post <span aria-hidden="true">→</span>
                   </span>
                 </div>
               </article>

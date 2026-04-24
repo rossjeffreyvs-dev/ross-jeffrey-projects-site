@@ -290,7 +290,7 @@ export default function Navbar() {
               </Link>
 
               {/* Projects (mobile collapsible) */}
-              <div className="border-t border-gray-200 dark:border-gray-800 pt-4">
+              {/* <div className="border-t border-gray-200 dark:border-gray-800 pt-4">
                 <button
                   className="w-full flex justify-between items-center text-left text-base font-medium text-gray-800 dark:text-gray-100"
                   onClick={() => toggleMobileSection("projects")}
@@ -315,7 +315,7 @@ export default function Navbar() {
                   </svg>
                 </button>
 
-                {/* {mobileOpen.projects && (
+                {mobileOpen.projects && (
                   <div className="mt-3 pl-4 space-y-3">
                     <Link
                       href="/projects"
@@ -349,7 +349,18 @@ export default function Navbar() {
                       </div>
                     </Link>
                   </div>
-                )} */}
+                )}
+              </div> */}
+
+              {/* Projects direct link */}
+              <div className="border-t border-gray-200 dark:border-gray-800 pt-4">
+                <Link
+                  href="/projects"
+                  className="block text-base font-medium text-gray-800 dark:text-gray-100"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Projects
+                </Link>
               </div>
 
               {/* Blog direct link */}
@@ -363,8 +374,19 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              {/* About (mobile collapsible) */}
+              {/* About direct link */}
               <div className="border-t border-gray-200 dark:border-gray-800 pt-4">
+                <Link
+                  href="/profile"
+                  className="block text-base font-medium text-gray-800 dark:text-gray-100"
+                  onClick={() => setIsOpen(false)}
+                >
+                  About
+                </Link>
+              </div>
+
+              {/* About (mobile collapsible) */}
+              {/* <div className="border-t border-gray-200 dark:border-gray-800 pt-4">
                 <button
                   className="w-full flex justify-between items-center text-left text-base font-medium text-gray-800 dark:text-gray-100"
                   onClick={() => toggleMobileSection("about")}
@@ -389,7 +411,7 @@ export default function Navbar() {
                   </svg>
                 </button>
 
-                {/* {mobileOpen.about && (
+                {mobileOpen.about && (
                   <div className="mt-3 pl-4 space-y-3">
                     <Link
                       href="/profile"
@@ -423,8 +445,8 @@ export default function Navbar() {
                       </div>
                     </Link>
                   </div>
-                )} */}
-              </div>
+                )}
+              </div> */}
 
               {/* Contact */}
               <div className="border-t border-gray-200 dark:border-gray-800 pt-4 pb-2">

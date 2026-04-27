@@ -60,9 +60,7 @@ export default function Projects() {
           >
             <div className="projectCardHeader">
               <span className="projectCardIcon">⚙️</span>
-              <h2 className="projectCardTitle">
-                Agentic Customer Lifecycle Platform
-              </h2>
+              <h2 className="projectCardTitle">Agentic Customer Lifecycle</h2>
             </div>
             <p className="projectCardText">
               AI-powered multi-agent system that optimizes onboarding,

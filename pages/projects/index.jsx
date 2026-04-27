@@ -59,7 +59,7 @@ export default function Projects() {
             className="projectCard"
           >
             <div className="projectCardHeader">
-              <span className="projectCardIcon">🧬</span>
+              <span className="projectCardIcon">⚙️</span>
               <h2 className="projectCardTitle">
                 Agentic Customer Lifecycle Platform
               </h2>

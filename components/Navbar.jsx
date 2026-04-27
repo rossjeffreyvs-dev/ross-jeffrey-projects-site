@@ -127,6 +127,23 @@ export default function Navbar() {
 
                     <li>
                       <Link
+                        href="https://clinical-trial-patient-agent.jeffrey-ross.me"
+                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
+                      >
+                        <span className="mr-2">🧬</span>
+                        <div>
+                          <p className="font-semibold">
+                            Agentic Customer Lifecycle
+                          </p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            Multi-agent system orchestrating onboarding
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
                         href="https://resume-analyzer.jeffrey-ross.me"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >

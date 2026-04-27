@@ -25,6 +25,15 @@ const posts = [
     href: "/blog/semantic-patient-search",
   },
   {
+    title: "Agentic Customer Lifecycle Platform",
+    icon: "⚙️",
+    summary:
+      "A multi-agent lifecycle system that ingests prospects, evaluates \
+      fit and stage, detects revenue blockers, and guides human decision-making \
+      to unlock conversion and maximize revenue impact.",
+    href: "/blog/agentic-customer-lifecycle-platform",
+  },
+  {
     title: "Common Data Model",
     icon: "🧩",
     summary:

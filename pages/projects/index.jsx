@@ -55,6 +55,27 @@ export default function Projects() {
           </Link>
 
           <Link
+            href="https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-customer-lifecycle-platform"
+            className="projectCard"
+          >
+            <div className="projectCardHeader">
+              <span className="projectCardIcon">🧬</span>
+              <h2 className="projectCardTitle">
+                Agentic Customer Lifecycle Platform
+              </h2>
+            </div>
+            <p className="projectCardText">
+              AI-powered multi-agent system that optimizes onboarding,
+              activation, and retention by detecting drop-offs, prioritizing
+              interventions, and quantifying revenue impact across the customer
+              journey.{" "}
+            </p>
+            <span className="projectLink">
+              View project description and live demo →
+            </span>
+          </Link>
+
+          <Link
             href="https://resume-analyzer.jeffrey-ross.me"
             className="projectCard"
           >

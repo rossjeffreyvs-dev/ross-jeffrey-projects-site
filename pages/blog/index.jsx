@@ -4,52 +4,45 @@ import Link from "next/link";
 
 const posts = [
   {
+    title: "Claude Clinical Protocol Reasoning",
+    icon: "🧠",
+    summary:
+      "A project write-up on designing a Claude-style reasoning workflow for clinical protocol interpretation, synthetic patient evaluation, eligibility recommendations, and transparent audit trails.",
+    href: "/blog/claude-clinical-protocol-reasoning-engine",
+  },
+  {
     title: "Agentic Clinical Trial Eligibility",
     icon: "🧬",
     summary:
-      "Clinical trial recruitment sounds straightforward: find eligible patients, enroll them. \
-    At Memorial Sloan Kettering (MSK), we designed an agentic AI service that uses an LLM to \
-    contextualize protocol PDFs and evaluate incoming patients to determine whether their specimens are eligible \
-    for clinical trial research.",
+      "Clinical trial recruitment sounds straightforward: find eligible patients, enroll them. At Memorial Sloan Kettering, we designed an agentic AI service that uses an LLM to contextualize protocol PDFs and evaluate incoming patients.",
     href: "/blog/agentic-clinical-trial-eligibility",
   },
   {
     title: "Semantic Search",
     icon: "🔎",
     summary:
-      "AI-powered search tool that enables natural language queries \
-      across patient and clinical data. Using embeddings and vector \
-      similarity, it identifies relevant patients based on meaning—not \
-      just keywords—supporting faster cohort discovery and data \
-      exploration.",
+      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords.",
     href: "/blog/semantic-patient-search",
   },
   {
     title: "Agentic Customer Lifecycle Platform",
     icon: "⚙️",
     summary:
-      "A multi-agent lifecycle system that ingests prospects, evaluates \
-      fit and stage, detects revenue blockers, and guides human decision-making \
-      to unlock conversion and maximize revenue impact.",
+      "A multi-agent lifecycle system that ingests prospects, evaluates fit and stage, detects revenue blockers, and guides human decision-making to unlock conversion and maximize revenue impact.",
     href: "/blog/agentic-customer-lifecycle-platform",
   },
   {
     title: "Common Data Model",
     icon: "🧩",
     summary:
-      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is \
-      discoverable, reproducible, and scalable. At Memorial Sloan Kettering (MSK), we designed a shared \
-      Common Data Model (CDM) across multiple biobanks and layered an ontology in Palantir Foundry to power \
-      cross-biobank search and specimen discovery for cancer research investigators.",
+      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is discoverable, reproducible, and scalable across multiple biobanks and data platforms.",
     href: "/blog/ontology-vs-cdm-biobanking",
   },
   {
     title: "Concordance Testing",
     icon: "⚖️",
     summary:
-      "Concordance testing is the backbone of trustworthy data migrations and integrations—especially \
-    in regulated clinical research environments. At Memorial Sloan Kettering (MSK), we used concordance testing \
-    to validate a large-scale migration and daily synchronization.",
+      "Concordance testing is the backbone of trustworthy data migrations and integrations, especially in regulated clinical research environments.",
     href: "/blog/concordance-testing",
   },
 ];
@@ -66,8 +59,10 @@ export default function Blog() {
             Notes on AI, data platforms, and product engineering
           </h1>
           <p className="blogIndexIntro">
-            A collection of essays and project write-ups focused on clinical AI,
-            enterprise data systems, workflow design, and applied engineering.
+            A collection of project write-ups and technical essays covering
+            clinical AI, enterprise data systems, agentic workflow design,
+            product architecture, and applied engineering lessons from building
+            portfolio-scale demos.
           </p>
         </header>
 

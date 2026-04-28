@@ -1092,3 +1092,13 @@ html.dark .profileButtonSecondary:hover {
 html.dark .profileButtonTertiary {
   color: #60a5fa;
 }
+
+.blogIndexIntro,
+.projectsIntro {
+  margin-top: 16px;
+  width: 100%;
+  max-width: none; /* ← remove constraint */
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.6;
+}

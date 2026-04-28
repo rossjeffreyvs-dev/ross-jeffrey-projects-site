@@ -99,12 +99,14 @@ html.dark .blogIndexTitle {
   color: #f9fafb;
 }
 
-.blogIndexIntro {
-  margin: 1.1rem 0 0;
-  max-width: 980px;
-  font-size: 1.18rem;
-  line-height: 1.8;
-  color: #4b5563;
+.blogIndexIntro,
+.projectsIntro {
+  margin-top: 16px;
+  width: 100%;
+  max-width: none; /* ← remove constraint */
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 html.dark .blogIndexIntro {

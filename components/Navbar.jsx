@@ -116,7 +116,7 @@ export default function Navbar() {
                         href="https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-customer-lifecycle-platform"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
-                        <span className="mr-2">🧬</span>
+                        <span className="mr-2">⚙️</span>
                         <div>
                           <p className="font-semibold">
                             Agentic Customer Lifecycle
@@ -133,7 +133,7 @@ export default function Navbar() {
                         href="https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine"
                         className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
                       >
-                        <span className="mr-2">🧬</span>
+                        <span className="mr-2">🧠</span>
                         <div>
                           <p className="font-semibold">
                             Claude Clinical Protocol Reasoning

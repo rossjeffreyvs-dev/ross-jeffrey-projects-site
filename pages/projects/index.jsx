@@ -18,18 +18,18 @@ const projects = [
       "A Claude-style clinical reasoning demo that interprets protocol eligibility language, evaluates synthetic patient evidence, and produces transparent criterion-level recommendations with audit-friendly reasoning traces.",
   },
   {
-    title: "Semantic Search",
-    icon: "🔍",
-    href: "https://semantic-patient-search.jeffrey-ross.me/",
-    summary:
-      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords—supporting faster cohort discovery and data exploration.",
-  },
-  {
     title: "Agentic Customer Lifecycle",
     icon: "⚙️",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-customer-lifecycle-platform",
     summary:
       "AI-powered multi-agent system that optimizes onboarding, activation, and retention by detecting drop-offs, prioritizing interventions, and quantifying revenue impact across the customer journey.",
+  },
+  {
+    title: "Semantic Search",
+    icon: "🔍",
+    href: "https://semantic-patient-search.jeffrey-ross.me/",
+    summary:
+      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords—supporting faster cohort discovery and data exploration.",
   },
   {
     title: "AI Résumé Match",
@@ -54,7 +54,6 @@ export default function Projects() {
 
       <main className="projectsMain">
         <section className="projectsHero">
-          <p className="blogIndexEyebrow">Projects</p>
           <h1 className="projectsTitle">Portfolio Projects</h1>
           <p className="blogIndexIntro">
             A collection of applied AI and data product demos spanning clinical

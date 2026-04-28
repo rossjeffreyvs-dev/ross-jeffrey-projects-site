@@ -110,20 +110,6 @@ export default function Navbar() {
                         </div>
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        href="https://semantic-patient-search.jeffrey-ross.me/"
-                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
-                      >
-                        <span className="mr-2">🔍</span>
-                        <div>
-                          <p className="font-semibold">Semantic Search</p>
-                          <p className="text-sm text-gray-500 dark:text-gray-400">
-                            Semantic patient search for research discovery
-                          </p>
-                        </div>
-                      </Link>
-                    </li>
 
                     <li>
                       <Link
@@ -137,6 +123,38 @@ export default function Navbar() {
                           </p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             Multi-agent system orchestrating onboarding
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine"
+                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
+                      >
+                        <span className="mr-2">🧬</span>
+                        <div>
+                          <p className="font-semibold">
+                            Claude Clinical Protocol Reasoning
+                          </p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            Multi-agent Reasoning & Eligibility Platform
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="https://semantic-patient-search.jeffrey-ross.me/"
+                        className="flex items-start space-x-2 hover:text-black dark:hover:text-white transition"
+                      >
+                        <span className="mr-2">🔍</span>
+                        <div>
+                          <p className="font-semibold">Semantic Search</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
+                            Semantic patient search for research discovery
                           </p>
                         </div>
                       </Link>

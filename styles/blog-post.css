@@ -1,5 +1,5 @@
 /* styles/blog-post.css
-   Blog index, blog post, diagram, and TrainJazz-specific styles.
+   Blog index, blog post, diagram, and blog-specific styles.
 */
 
 /* -------------------------------------------------------------------------- */
@@ -329,10 +329,10 @@ html.dark .blogProse h3 {
 
 .blogCallout,
 .blogFigure,
-.trainJazzSignalGrid,
-.trainJazzArchitectureStack,
-.trainJazzFlowGrid,
-.trainJazzWhyGrid {
+.blogSignalGrid,
+.blogArchitectureStack,
+.blogFlowGrid,
+.blogWhyGrid {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -378,6 +378,141 @@ html.dark .blogCaption {
 }
 
 /* -------------------------------------------------------------------------- */
+/* General diagrams                                                           */
+/* -------------------------------------------------------------------------- */
+
+.blogDiagram {
+  display: grid;
+  gap: 12px;
+  align-items: stretch;
+  margin: 20px 0 28px;
+}
+
+.agentDiagram {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.architectureDiagram {
+  grid-template-columns: repeat(7, minmax(0, auto));
+}
+
+.diagramBox {
+  min-height: 96px;
+  padding: 14px 16px;
+  border: 1px solid #bfdbfe;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff, #eff6ff);
+  color: #172554;
+}
+
+.diagramBox strong {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.35rem;
+  color: #0f172a;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.diagramBox strong::before {
+  flex: 0 0 auto;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.agentDiagram .diagramBox:nth-child(1) strong::before {
+  content: "📥";
+}
+
+.agentDiagram .diagramBox:nth-child(3) strong::before {
+  content: "📊";
+}
+
+.agentDiagram .diagramBox:nth-child(5) strong::before {
+  content: "💰";
+}
+
+.agentDiagram .diagramBox:nth-child(7) strong::before {
+  content: "👤";
+}
+
+.agentDiagram .diagramBox:nth-child(9) strong::before {
+  content: "🔁";
+}
+
+.architectureDiagram .diagramBox:nth-child(1) strong::before {
+  content: "🖥️";
+}
+
+.architectureDiagram .diagramBox:nth-child(3) strong::before {
+  content: "⚙️";
+}
+
+.architectureDiagram .diagramBox:nth-child(5) strong::before {
+  content: "🗂️";
+}
+
+.architectureDiagram .diagramBox:nth-child(7) strong::before {
+  content: "🧠";
+}
+
+.diagramBox span {
+  display: block;
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.diagramBox-green {
+  border-color: #bbf7d0;
+  background: linear-gradient(135deg, #ffffff, #f0fdf4);
+}
+
+.diagramBox-orange {
+  border-color: #fed7aa;
+  background: linear-gradient(135deg, #ffffff, #fff7ed);
+}
+
+.diagramBox-purple {
+  border-color: #ddd6fe;
+  background: linear-gradient(135deg, #ffffff, #f5f3ff);
+}
+
+.diagramArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.hitlDiagram {
+  grid-template-columns:
+    minmax(180px, 1fr)
+    48px
+    minmax(180px, 1fr)
+    48px
+    minmax(180px, 1fr)
+    48px
+    minmax(180px, 1fr);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hitlDiagram,
+  .architectureDiagram,
+  .agentDiagram {
+    grid-template-columns: 1fr;
+  }
+
+  .diagramArrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
 /* Trial diagrams                                                             */
 /* -------------------------------------------------------------------------- */
 
@@ -420,6 +555,7 @@ html.dark .blogCaption {
     0 12px 30px rgba(15, 23, 42, 0.06);
 }
 
+/* Trial diagram internals retained */
 .trialWorkflowGrid {
   display: grid;
   grid-template-columns: 1.2fr 56px 1fr 56px 1.35fr;
@@ -786,124 +922,45 @@ html.dark .blogCaption {
 }
 
 /* -------------------------------------------------------------------------- */
-/* General diagrams                                                           */
+/* Shared card grids                                                          */
 /* -------------------------------------------------------------------------- */
 
-.blogDiagram {
-  display: grid;
-  gap: 14px;
-  align-items: stretch;
-  margin: 24px 0;
-}
-
-.lifecycleDiagram,
-.agentDiagram {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.architectureDiagram {
-  grid-template-columns: repeat(7, minmax(0, auto));
-}
-
-.diagramBox {
-  min-height: 110px;
-  padding: 18px;
-  border: 1px solid #bfdbfe;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #ffffff, #eff6ff);
-  color: #172554;
-}
-
-.diagramBox strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #0f172a;
-  font-weight: 900;
-}
-
-.diagramBox span {
-  display: block;
-  color: #475569;
-  font-size: 0.92rem;
-  line-height: 1.45;
-}
-
-.diagramBox-green {
-  border-color: #bbf7d0;
-  background: linear-gradient(135deg, #ffffff, #f0fdf4);
-}
-
-.diagramBox-orange {
-  border-color: #fed7aa;
-  background: linear-gradient(135deg, #ffffff, #fff7ed);
-}
-
-.diagramBox-purple {
-  border-color: #ddd6fe;
-  background: linear-gradient(135deg, #ffffff, #f5f3ff);
-}
-
-.diagramArrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #64748b;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-
-@media (max-width: 900px) {
-  .lifecycleDiagram,
-  .architectureDiagram,
-  .agentDiagram {
-    grid-template-columns: 1fr;
-  }
-
-  .diagramArrow {
-    transform: rotate(90deg);
-  }
-}
-
-/* -------------------------------------------------------------------------- */
-/* TrainJazz blog post                                                        */
-/* -------------------------------------------------------------------------- */
-
-.trainJazzCallout {
+.blogCallout {
   display: flex;
   gap: 0.9rem;
   align-items: flex-start;
 }
 
-.trainJazzCalloutIcon {
+.blogCalloutIcon {
   flex: 0 0 auto;
   font-size: 1.5rem;
   line-height: 1;
   transform: translateY(0.1rem);
 }
 
-.trainJazzSignalGrid,
-.trainJazzWhyGrid {
+.blogSignalGrid,
+.blogWhyGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.trainJazzSignalCard,
-.trainJazzWhyCard,
-.trainJazzArchitectureItem,
-.trainJazzFlowCard {
+.blogSignalCard,
+.blogWhyCard,
+.blogArchitectureItem,
+.blogFlowCard {
   border: 1px solid #e2e8f0;
   border-radius: 1.25rem;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
 }
 
-.trainJazzSignalCard {
+.blogSignalCard {
   min-height: 150px;
   padding: 1.15rem;
 }
 
-.trainJazzSignalCard strong {
+.blogSignalCard strong {
   display: inline-flex;
   align-items: center;
   margin: 0 0 0.35rem;
@@ -911,7 +968,7 @@ html.dark .blogCaption {
   font-weight: 900;
 }
 
-.trainJazzSignalCard .trainJazzIcon {
+.blogSignalCard .blogIcon {
   display: inline-flex;
   align-items: center;
   margin-right: 0.55rem;
@@ -920,25 +977,47 @@ html.dark .blogCaption {
   vertical-align: middle;
 }
 
-.trainJazzSignalCard span:last-child {
+.blogSignalCard span:last-child {
   display: block;
   color: #475569;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-.trainJazzIcon {
+.blogIcon {
   display: inline-flex;
   font-size: 1.45rem;
   line-height: 1;
 }
 
-.trainJazzArchitectureStack {
+.blogCompactGrid {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.blogCompactGrid .blogWhyCard,
+.blogCompactGrid .blogSignalCard {
+  min-height: unset;
+  padding: 0.95rem 1rem;
+}
+
+.blogCompactGrid .blogWhyTitle,
+.blogCompactGrid .blogSignalCard strong {
+  margin-bottom: 0.35rem;
+}
+
+.blogCompactGrid .blogWhyCard p,
+.blogCompactGrid .blogSignalCard span:last-child {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.blogArchitectureStack {
   display: grid;
   gap: 1rem;
 }
 
-.trainJazzArchitectureItem {
+.blogArchitectureItem {
   display: grid;
   grid-template-columns: 56px 1fr;
   gap: 1rem;
@@ -946,7 +1025,7 @@ html.dark .blogCaption {
   padding: 1.1rem;
 }
 
-.trainJazzArchitectureNumber {
+.blogArchitectureNumber {
   display: grid;
   place-items: center;
   width: 48px;
@@ -961,28 +1040,44 @@ html.dark .blogCaption {
   letter-spacing: 0.08em;
 }
 
-.trainJazzArchitectureItem h3 {
-  margin: 0 0 0.4rem;
+.blogArchitectureTitle,
+.blogArchitectureItem h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.35rem;
   color: #0f172a;
   font-size: 1.05rem;
   line-height: 1.25;
   font-weight: 900;
 }
 
-.trainJazzArchitectureItem p {
+.blogArchitectureTitle .blogIcon {
+  flex: 0 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.blogArchitectureItem p {
   margin: 0;
   color: #475569;
   font-size: 0.98rem;
   line-height: 1.6;
 }
 
-.trainJazzFlowGrid {
+.blogFlowGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
-.trainJazzFlowCard {
+.blogFlowCard {
   display: flex;
   gap: 0.85rem;
   align-items: flex-start;
@@ -992,7 +1087,7 @@ html.dark .blogCaption {
   line-height: 1.55;
 }
 
-.trainJazzFlowCard span {
+.blogFlowCard span {
   flex: 0 0 auto;
   display: grid;
   place-items: center;
@@ -1007,22 +1102,25 @@ html.dark .blogCaption {
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
 }
 
-.trainJazzWhyCard {
-  padding: 1rem;
+.blogWhyCard {
+  padding: 0.7rem 0.9rem;
+  min-height: unset; /* 🔥 MOST IMPORTANT */
+  align-items: start; /* 🔥 CRITICAL */
+  height: auto;
 }
 
-.trainJazzWhyTitle {
+.blogWhyTitle {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  margin: 0 0 0.45rem;
   color: #0f172a;
   font-size: 1.05rem;
-  line-height: 1.25;
   font-weight: 900;
+  margin: 0 0 0.25rem; /* ↓ tighter gap */
+  gap: 0.4rem;
+  line-height: 1.2;
 }
 
-.trainJazzWhyTitle .trainJazzIcon {
+.blogWhyTitle .blogIcon {
   flex: 0 0 24px;
   display: inline-flex;
   align-items: center;
@@ -1030,39 +1128,944 @@ html.dark .blogCaption {
   width: 24px;
   height: 24px;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1;
 }
 
-.trainJazzWhyTitle span:last-child {
+.blogWhyTitle span:last-child {
   display: inline-block;
 }
 
-.trainJazzWhyCard p {
+.blogWhyCard p {
   margin: 0;
+  line-height: 1.4;
+  font-size: 0.95rem;
   color: #475569;
-  font-size: 0.98rem;
-  line-height: 1.55;
 }
 
 @media (max-width: 900px) {
-  .trainJazzSignalGrid,
-  .trainJazzWhyGrid {
+  .blogSignalGrid,
+  .blogWhyGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .trainJazzFlowGrid {
+  .blogFlowGrid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  .trainJazzSignalGrid,
-  .trainJazzWhyGrid {
+  .blogSignalGrid,
+  .blogWhyGrid {
     grid-template-columns: 1fr;
   }
 
-  .trainJazzArchitectureItem {
+  .blogArchitectureItem {
     grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* CDM / Biobank hierarchy diagram                                            */
+/* -------------------------------------------------------------------------- */
+
+.cdmHierarchyFigure {
+  margin: 2rem 0 2.5rem;
+}
+
+.cdmHierarchySurface {
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f8fafc 100%);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.cdmHierarchyHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cdmHierarchyEyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.cdmHierarchyHeader h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  font-weight: 900;
+}
+
+.cdmHierarchyHeader p {
+  margin: 0.75rem 0 0;
+  max-width: 760px;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cdmHierarchyGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.cdmMainFlow,
+.cdmSideFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cdmSideFlow {
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.cdmAliquotRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cdmHierarchyCard {
+  width: min(100%, 360px);
+  min-height: 92px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 0.9rem;
+  align-items: center;
+  border: 1px solid #dbe4f0;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  box-shadow:
+    0 1px 1px rgba(15, 23, 42, 0.03),
+    0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.cdmHierarchyCardHighlight {
+  background: linear-gradient(180deg, #ffffff 0%, #eef4ff 100%);
+  border-color: #bfdbfe;
+}
+
+.cdmHierarchyCardPurple {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 100%);
+  border-color: #ddd6fe;
+}
+
+.cdmHierarchyCardSubtle {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.cdmHierarchyIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: #1e3a8a;
+  background: #eef4ff;
+  border: 1px solid #dbe4f0;
+}
+
+.cdmHierarchyIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cdmHierarchyCard strong {
+  display: block;
+  color: #1e293b;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.cdmHierarchyCard span {
+  display: block;
+  margin-top: 0.25rem;
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.cdmArrowDown,
+.cdmArrowRight {
+  color: #5b86ee;
+  font-size: 1.45rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.cdmArrowDown {
+  margin: 0.35rem 0;
+}
+
+.cdmArrowRight {
+  margin: 0 0.1rem;
+}
+
+.cdmRelationBlock,
+.cdmJoinBlock {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.cdmRelationLine {
+  width: 2px;
+  height: 30px;
+  margin-top: 0.6rem;
+  border-left: 2px dashed #9bb8ff;
+}
+
+.cdmRelationLabel {
+  margin: 0.45rem 0 0;
+  color: #64748b;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.cdmJoinInputs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-bottom: 0.35rem;
+}
+
+.cdmJoinInputs span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  color: #1e3a8a;
+  background: #eef4ff;
+  border: 1px solid #dbe4f0;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .cdmHierarchyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cdmSideFlow {
+    padding-top: 0;
+  }
+
+  .cdmAliquotRow {
+    flex-direction: column;
+  }
+
+  .cdmArrowRight {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .cdmHierarchySurface {
+    padding: 1.25rem;
+    border-radius: 22px;
+  }
+
+  .cdmHierarchyCard {
+    width: 100%;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* CDM vs Ontology Diagram                                                    */
+/* -------------------------------------------------------------------------- */
+
+.cdmOntologySurface {
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f8fafc 100%);
+  padding: 2rem;
+}
+
+/* Header */
+
+.cdmOntologyHeader {
+  margin-bottom: 1.75rem;
+  max-width: 720px;
+}
+
+.cdmOntologyEyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.cdmOntologyHeader h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  color: #0f172a;
+}
+
+.cdmOntologyHeader p {
+  margin: 0.6rem 0 0;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Main Flow (LEFT → MIDDLE → RIGHT) */
+
+.cdmOntologyFlow {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr 1fr;
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+/* Panels */
+
+.cdmOntologyPanel {
+  border: 1px solid #dbe4f0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 1.2rem;
+  box-shadow:
+    0 1px 1px rgba(15, 23, 42, 0.03),
+    0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.cdmOntologyPanelGreen {
+  border-color: #bbf7d0;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+/* Panel Header */
+
+.cdmOntologyPanelHeader {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+}
+
+.cdmOntologyIcon {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.cdmOntologyPanelHeader h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.cdmOntologyPanelHeader p {
+  margin: 0.15rem 0 0;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* Lists */
+
+.cdmOntologyPanel ul {
+  margin: 0.45rem 0 0.6rem;
+  padding-left: 1.1rem;
+}
+
+.cdmOntologyPanel li {
+  margin: 0.32rem 0;
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+/* Best for */
+
+.cdmOntologyBestFor {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.cdmOntologyBestFor strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: #0f172a;
+}
+
+.cdmOntologyBestFor span {
+  color: #475569;
+}
+
+/* Transform Layer (Middle) */
+
+.cdmOntologyTransformLayer {
+  display: grid;
+  grid-template-columns: 24px 1fr 24px;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cdmOntologyArrow {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #2563eb;
+  opacity: 0.9;
+}
+
+.cdmOntologyTransformCard {
+  border: 1px solid #fde68a;
+  background: linear-gradient(180deg, #fffdf7 0%, #fffbeb 100%);
+  border-radius: 14px;
+  padding: 0.8rem;
+  box-shadow:
+    0 1px 1px rgba(15, 23, 42, 0.03),
+    0 8px 18px rgba(15, 23, 42, 0.05);
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .cdmOntologyFlow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cdmOntologyTransformLayer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.3rem;
+  }
+
+  .cdmOntologyArrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Concordance testing diagram                                                */
+/* -------------------------------------------------------------------------- */
+
+.concordanceFigure {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.concordanceSurface {
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f8fafc 100%);
+  padding: 2rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+.concordanceHeader {
+  max-width: 100%;
+  margin-bottom: 1.25rem; /* ↓ tighter */
+}
+
+.concordanceEyebrow {
+  margin: 0 0 0.4rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.concordanceHeader h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem); /* ↓ reduced */
+  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 800; /* slightly lighter */
+}
+
+.concordanceHeader p {
+  margin: 0.5rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 100%; /* 🔥 remove narrow constraint */
+}
+
+.concordanceFlow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr) 56px minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.concordanceCard {
+  min-height: 150px;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1.15rem;
+  border: 1px solid #dbe4f0;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+.concordanceCardCenter {
+  border-color: #fbbf24;
+  background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    0 12px 32px rgba(251, 191, 36, 0.15); /* subtle glow */
+  transform: scale(1.03); /* slight emphasis */
+}
+
+.concordanceIcon {
+  flex: 0 0 auto;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.concordanceCard h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.concordanceCard p {
+  margin: 0.35rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.concordanceConnector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.concordanceChecks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.concordanceChecks div {
+  padding: 0.9rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.concordanceChecks strong {
+  display: block;
+  color: #0f172a;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  font-weight: 900;
+}
+
+.concordanceChecks span {
+  display: block;
+  margin-top: 0.25rem;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .concordanceFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .concordanceConnector span {
+    transform: rotate(45deg);
+  }
+
+  .concordanceChecks {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Daily sync validation diagram                                              */
+/* -------------------------------------------------------------------------- */
+
+.dailySyncFigure {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dailySyncSurface {
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f8fafc 100%);
+  padding: 2rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+.dailySyncHeader {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.dailySyncEyebrow {
+  margin: 0 0 0.4rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.dailySyncHeader h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.dailySyncHeader p {
+  margin: 0.55rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.dailySyncFlow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.dailySyncCard {
+  min-height: 132px;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1.15rem;
+  border: 1px solid #dbe4f0;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+.dailySyncCardFoundry {
+  border-color: #bfdbfe;
+  background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+}
+
+.dailySyncIcon {
+  flex: 0 0 auto;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.dailySyncCard h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.dailySyncCard p {
+  margin: 0.35rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.dailySyncConnector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.dailySyncChecks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.dailySyncCheckCard {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.dailySyncCheckNumber {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #eef4ff;
+  border: 1px solid #dbe4f0;
+  color: #1e3a8a;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.dailySyncCheckCard h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.dailySyncCheckCard p {
+  margin: 0.35rem 0 0;
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .dailySyncFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .dailySyncConnector {
+    transform: rotate(90deg);
+  }
+
+  .dailySyncChecks {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Concordance alerting diagram                                               */
+/* -------------------------------------------------------------------------- */
+
+.concordanceAlertFigure {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.concordanceAlertSurface {
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f8fafc 100%);
+  padding: 2rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+.concordanceAlertHeader {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.concordanceAlertEyebrow {
+  margin: 0 0 0.4rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.concordanceAlertHeader h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.concordanceAlertHeader p {
+  margin: 0.55rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.concordanceAlertFlow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.concordanceAlertCard {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1.15rem;
+  border: 1px solid #dbe4f0;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+.concordanceAlertCardSource {
+  min-height: 150px;
+  align-items: center;
+  border-color: #fecaca;
+  background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);
+}
+
+.concordanceAlertCardTarget {
+  min-height: 118px;
+}
+
+.concordanceAlertIcon {
+  flex: 0 0 auto;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.concordanceAlertCard h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.concordanceAlertCard p {
+  margin: 0.35rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.concordanceAlertTargets {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.concordanceAlertRoutes {
+  position: relative;
+  min-height: 180px;
+}
+
+.concordanceAlertRouteLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #94a3b8;
+  transform-origin: left center;
+}
+
+.concordanceAlertRouteLine::after {
+  content: "→";
+  position: absolute;
+  right: -0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.concordanceAlertRouteLineTop {
+  top: 42%;
+  transform: rotate(-10deg);
+}
+
+.concordanceAlertRouteLineBottom {
+  top: 58%;
+  transform: rotate(10deg);
+}
+
+.concordanceAlertNote {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.concordanceAlertNote strong {
+  display: block;
+  color: #0f172a;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  font-weight: 900;
+}
+
+.concordanceAlertNote span {
+  display: block;
+  margin-top: 0.25rem;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .concordanceAlertFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .concordanceAlertRoutes {
+    min-height: 56px;
+    display: grid;
+    place-items: center;
+  }
+
+  .concordanceAlertRouteLine {
+    position: static;
+    width: 2px;
+    height: 42px;
+    transform: none;
+  }
+
+  .concordanceAlertRouteLineBottom {
+    display: none;
+  }
+
+  .concordanceAlertRouteLine::after {
+    content: "↓";
+    right: auto;
+    top: auto;
+    bottom: -1.1rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

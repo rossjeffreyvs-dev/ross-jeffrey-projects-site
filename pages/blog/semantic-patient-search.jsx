@@ -1,12 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-// Blog post page styles
-// NOTE (Next.js): Global CSS is typically imported in app/layout.(js|tsx).
-// If your project allows per-page global CSS imports, you can import it here.
-// Otherwise, add: import '../../styles/blog-post.css'; to your root layout or blog layout.
-// import '../../styles/blog-post.css';
-
 export default function BlogPost() {
   return (
     <div className="blogPage">
@@ -15,10 +9,12 @@ export default function BlogPost() {
       <main className="blogMain">
         <article>
           <h1 className="blogTitle">
-            Building a Semantic Search Demo for Synthetic Healthcare Data
+            Semantic Patient Search:
+            <br />
+            Building Concept-Based Retrieval for Synthetic Healthcare Data
           </h1>
 
-          <p className="blogMeta">Published Feb 2026 · by Jeff Ross</p>
+          <p className="blogMeta">Published Feb 2026 · by Jeffrey Ross</p>
 
           <section className="blogProse">
             <p>
@@ -26,31 +22,28 @@ export default function BlogPost() {
               clinical notes, or research cohorts using concepts rather than
               exact keyword matches. Traditional search works well when the user
               knows the exact diagnosis code, medication name, or wording used
-              in a note. In practice, however, clinicians and researchers often
-              search more broadly: patients with uncontrolled diabetes and
-              kidney issues, people with probable heart failure symptoms, or
-              subjects with lung cancer on immunotherapy. These queries are
-              concept-driven, and they are not always captured well by standard
-              keyword search.
+              in a note. In practice, clinicians and researchers often search
+              more broadly: patients with uncontrolled diabetes and kidney
+              issues, people with probable heart failure symptoms, or subjects
+              with lung cancer on immunotherapy.
             </p>
 
             <p>
-              To demonstrate how this problem can be approached, I built a small
-              semantic search demo using synthetic healthcare data. The project
-              indexes patient demographic attributes, diagnoses, medications,
-              lab summaries, and short clinical notes. Rather than matching only
-              literal terms, it converts both the records and the user’s query
-              into embeddings and retrieves the most semantically similar
-              results.
+              This project explores that problem through a semantic patient
+              search demo: a retrieval workflow that indexes synthetic patient
+              demographics, diagnoses, medications, lab summaries, and clinical
+              notes, then returns conceptually similar records based on the
+              meaning of a natural-language query.
             </p>
 
-            <p>
-              The goal of the demo is not to replace clinical systems or
-              enterprise search platforms. Instead, it shows the core mechanics
-              behind semantic retrieval in a healthcare-oriented setting and
-              highlights how such an approach could support patient discovery,
-              cohort identification, and downstream AI workflows.
-            </p>
+            <div className="blogCallout">
+              <span className="blogCalloutIcon">🔎</span>
+              <div>
+                <strong>Core product concept:</strong> clinical search should
+                support meaning-based discovery, not just exact keyword
+                matching.
+              </div>
+            </div>
 
             <figure className="blogFigure">
               <img
@@ -63,7 +56,8 @@ export default function BlogPost() {
               </figcaption>
             </figure>
 
-            <h2>Why Semantic Search Matters in Healthcare</h2>
+            <h2>The Problem</h2>
+
             <p>
               Clinical and research environments contain a mix of structured and
               unstructured data. Relevant information is often spread across
@@ -72,30 +66,51 @@ export default function BlogPost() {
               notes, and research annotations.
             </p>
 
-            <p>Examples of searchable data include:</p>
-            <ul>
-              <li>
-                <strong>Demographics</strong>
-              </li>
-              <li>
-                <strong>Diagnoses</strong>
-              </li>
-              <li>
-                <strong>Medications</strong>
-              </li>
-              <li>
-                <strong>Laboratory results</strong>
-              </li>
-              <li>
-                <strong>Pathology summaries</strong>
-              </li>
-              <li>
-                <strong>Physician notes</strong>
-              </li>
-              <li>
-                <strong>Research annotations</strong>
-              </li>
-            </ul>
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧑‍⚕️</span>
+                  Patient Context
+                </strong>
+                <span>
+                  Patient data spans demographics, diagnoses, medications, labs,
+                  and clinical summaries.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">📝</span>
+                  Unstructured Notes
+                </strong>
+                <span>
+                  Important concepts may appear in free text rather than clean
+                  structured fields.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🔤</span>
+                  Keyword Mismatch
+                </strong>
+                <span>
+                  Relevant records may use different wording than the user’s
+                  search query.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧭</span>
+                  Cohort Discovery
+                </strong>
+                <span>
+                  Researchers often need approximate matches before narrowing a
+                  cohort.
+                </span>
+              </div>
+            </div>
 
             <p>
               A keyword search may miss relevant records when the wording
@@ -103,76 +118,158 @@ export default function BlogPost() {
               <em>high blood sugar with kidney complications</em> might want
               patients with diabetes, elevated A1C, and chronic kidney disease,
               even if those exact words do not appear together in a single
-              field. Semantic search helps bridge that gap by ranking records
-              according to meaning rather than exact text matching.
+              field.
             </p>
 
-            <p>This is especially useful when:</p>
-            <ul>
-              <li>
-                <strong>Searching across multiple data domains at once</strong>
-              </li>
-              <li>
-                <strong>Surfacing approximate matches</strong>
-              </li>
-              <li>
-                <strong>Supporting cohort-building workflows</strong>
-              </li>
-              <li>
+            <h2>Project Goal</h2>
+
+            <p>
+              The goal of this demo was to simulate a lightweight semantic
+              retrieval system for synthetic healthcare data. The system
+              converts patient records and user queries into embeddings,
+              compares them in vector space, and returns the most relevant
+              synthetic patient matches with clear supporting context.
+            </p>
+
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
                 <strong>
-                  Feeding retrieval results into a downstream LLM or agent
+                  <span className="blogIcon">🧬</span>
+                  Synthetic Records
                 </strong>
-              </li>
-            </ul>
+                <span>
+                  Demonstrates the pattern without using any real patient data.
+                </span>
+              </div>
 
-            <h2>Demo Design</h2>
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧠</span>
+                  Embeddings
+                </strong>
+                <span>
+                  Converts records and natural-language queries into semantic
+                  representations.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">📊</span>
+                  Similarity Ranking
+                </strong>
+                <span>
+                  Returns records ranked by conceptual relevance rather than
+                  exact wording.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧩</span>
+                  Extensible Pattern
+                </strong>
+                <span>
+                  Provides a foundation for cohort discovery, RAG, and agentic
+                  workflows.
+                </span>
+              </div>
+            </div>
+
+            <h2>How the Workflow Works</h2>
+
             <p>
-              The portfolio project uses synthetic patients only. Each patient
-              record contains a small but realistic mix of healthcare-oriented
-              fields:
-            </p>
-
-            <ul>
-              <li>
-                <strong>Patient identifier</strong>
-              </li>
-              <li>
-                <strong>Age and sex</strong>
-              </li>
-              <li>
-                <strong>Diagnosis list</strong>
-              </li>
-              <li>
-                <strong>Medications</strong>
-              </li>
-              <li>
-                <strong>Recent labs</strong>
-              </li>
-              <li>
-                <strong>Short clinical summary</strong>
-              </li>
-            </ul>
-
-            <p>
-              The application combines these fields into a searchable text
-              representation for each patient. It then generates embeddings for
-              all records, stores them in a vector index, and compares them
+              The application follows a straightforward semantic retrieval
+              pattern. Each patient record is converted into a searchable text
+              representation, embedded, stored in a vector index, and compared
               against the embedding of the user’s query.
             </p>
 
-            <div className="blogCallout">
-              <strong>Key idea:</strong> The system is not just looking for
-              exact words. It is looking for records that are conceptually
-              similar to the meaning of the query.
-            </div>
+            <div className="blogArchitectureStack">
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">01</div>
+                <div>
+                  <h3 className="blogArchitectureTitle">
+                    <span className="blogIcon">🧾</span>
+                    <span>Create synthetic records</span>
+                  </h3>
+                  <p>
+                    Generate patient-like records with demographics, diagnoses,
+                    medications, labs, and clinical summaries.
+                  </p>
+                </div>
+              </div>
 
-            <p>
-              A search like{" "}
-              <em>diabetic patient with worsening kidney function</em> can
-              retrieve patients whose records mention diabetes, elevated
-              creatinine, reduced eGFR, nephropathy, or related language, even
-              if the exact query text never appears verbatim.
-            </p>
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">02</div>
+                <div>
+                  <h3 className="blogArchitectureTitle">
+                    <span className="blogIcon">📝</span>
+                    <span>Build searchable summaries</span>
+                  </h3>
+                  <p>
+                    Combine relevant fields into patient-level text summaries
+                    suitable for semantic retrieval.
+                  </p>
+                </div>
+              </div>
+
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">03</div>
+                <div>
+                  <h3 className="blogArchitectureTitle">
+                    <span className="blogIcon">🧠</span>
+                    <span>Generate embeddings</span>
+                  </h3>
+                  <p>
+                    Convert each patient summary into a vector representation
+                    that captures conceptual meaning.
+                  </p>
+                </div>
+              </div>
+
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">04</div>
+                <div>
+                  <h3 className="blogArchitectureTitle">
+                    <span className="blogIcon">📦</span>
+                    <span>Store vectors</span>
+                  </h3>
+                  <p>
+                    Store embeddings in a lightweight vector index for
+                    similarity comparison.
+                  </p>
+                </div>
+              </div>
+
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">05</div>
+                <div>
+                  <h3 className="blogArchitectureTitle">
+                    <span className="blogIcon">🔎</span>
+                    <span>Embed the user query</span>
+                  </h3>
+                  <p>
+                    Convert the natural-language search request into the same
+                    semantic vector space.
+                  </p>
+                </div>
+              </div>
+
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">06</div>
+                <div>
+                  <h3 className="blogArchitectureTitle">
+                    <span className="blogIcon">📋</span>
+                    <span>Return ranked patients</span>
+                  </h3>
+                  <p>
+                    Display the most semantically similar synthetic patients
+                    with relevant clinical context.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <figure className="blogFigure">
               <img
@@ -185,41 +282,61 @@ export default function BlogPost() {
               </figcaption>
             </figure>
 
-            <h2>Architecture</h2>
-            <p>
-              The demo follows a straightforward semantic retrieval pattern that
-              is easy to explain and easy to extend.
-            </p>
-
-            <ul>
-              <li>
-                <strong>Create synthetic healthcare records</strong>
-              </li>
-              <li>
-                <strong>Convert each record into a text summary</strong>
-              </li>
-              <li>
-                <strong>Generate embeddings for each summary</strong>
-              </li>
-              <li>
-                <strong>Store the embeddings in a vector index</strong>
-              </li>
-              <li>
-                <strong>Embed the user query</strong>
-              </li>
-              <li>
-                <strong>Return the most similar patient records</strong>
-              </li>
-            </ul>
+            <h2>Architecture Pattern</h2>
 
             <p>
-              This same pattern can scale from a lightweight portfolio app to an
-              enterprise data platform. In a larger environment, the records
-              might come from normalized clinical and research systems, the
-              searchable objects might live in an ontology or governed data
-              layer, and the retrieval results could feed cohort selection tools
-              or LLM-assisted workflows.
+              The demo follows a retrieval architecture that is easy to explain
+              and easy to extend. In a larger environment, records might come
+              from governed clinical and research systems, the searchable
+              objects might live in an ontology or data platform, and retrieval
+              results could feed cohort tools or LLM-assisted workflows.
             </p>
+
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🖥️</span>
+                  Frontend
+                </strong>
+                <span>
+                  Search interface for natural-language queries and patient
+                  result review.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">⚙️</span>
+                  API Layer
+                </strong>
+                <span>
+                  Backend service for search requests, embedding comparison, and
+                  ranked result responses.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🗂️</span>
+                  Data Layer
+                </strong>
+                <span>
+                  Synthetic patient records combining structured fields and
+                  short clinical summaries.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧠</span>
+                  Vector Layer
+                </strong>
+                <span>
+                  Embeddings and similarity scoring power meaning-based
+                  retrieval.
+                </span>
+              </div>
+            </div>
 
             <figure className="blogFigure">
               <img
@@ -231,76 +348,212 @@ export default function BlogPost() {
               </figcaption>
             </figure>
 
+            <h2>Why Semantic Search Matters</h2>
+
+            <p>
+              Semantic search helps bridge the gap between how people describe a
+              clinical concept and how that concept appears across patient data.
+              It is especially useful when users need to search across multiple
+              domains at once, surface approximate matches, support
+              cohort-building workflows, or feed retrieval results into a
+              downstream LLM or agent.
+            </p>
+
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🌐</span>
+                  Cross-Domain Search
+                </strong>
+                <span>
+                  Searches across diagnoses, medications, labs, summaries, and
+                  notes together.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🎯</span>
+                  Approximate Matching
+                </strong>
+                <span>
+                  Finds records that are conceptually similar even when wording
+                  differs.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">👥</span>
+                  Cohort Building
+                </strong>
+                <span>
+                  Supports early discovery before strict inclusion and exclusion
+                  filters are applied.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🤖</span>
+                  AI Workflows
+                </strong>
+                <span>
+                  Can provide retrieved patient context to downstream LLM or
+                  agentic workflows.
+                </span>
+              </div>
+            </div>
+
             <h2>Example Queries</h2>
-            <p>The demo supports natural-language searches such as:</p>
-            <ul>
-              <li>
-                <strong>patients with poorly controlled diabetes</strong>
-              </li>
-              <li>
-                <strong>likely heart failure symptoms with elevated BNP</strong>
-              </li>
-              <li>
-                <strong>lung cancer patient receiving immunotherapy</strong>
-              </li>
-              <li>
-                <strong>breast cancer patient with anemia</strong>
-              </li>
-              <li>
-                <strong>chronic kidney disease and hypertension</strong>
-              </li>
-            </ul>
-
-            <h2>Why This Project Is Useful in a Portfolio</h2>
-            <p>
-              This small application demonstrates several capabilities that are
-              highly relevant to modern product and platform work:
-            </p>
-
-            <ul>
-              <li>
-                <strong>Applied AI in a realistic business domain</strong>
-              </li>
-              <li>
-                <strong>
-                  Retrieval over mixed structured and unstructured data
-                </strong>
-              </li>
-              <li>
-                <strong>Vector search and embeddings</strong>
-              </li>
-              <li>
-                <strong>A practical healthcare-oriented use case</strong>
-              </li>
-              <li>
-                <strong>
-                  A foundation for future RAG or agentic extensions
-                </strong>
-              </li>
-            </ul>
 
             <p>
-              It also provides a bridge between prototype work and enterprise
-              implementation. The same conceptual design can be extended to:
+              The demo supports natural-language searches that represent
+              clinical ideas rather than exact terms.
             </p>
 
-            <ul>
-              <li>
-                <strong>Cohort discovery</strong>
-              </li>
-              <li>
-                <strong>Semantic patient matching</strong>
-              </li>
-              <li>
-                <strong>Protocol eligibility screening</strong>
-              </li>
-              <li>
-                <strong>Ontology-backed retrieval</strong>
-              </li>
-              <li>
-                <strong>Human-in-the-loop review workflows</strong>
-              </li>
-            </ul>
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🩸</span>
+                  Diabetes Control
+                </strong>
+                <span>patients with poorly controlled diabetes</span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">❤️</span>
+                  Heart Failure
+                </strong>
+                <span>likely heart failure symptoms with elevated BNP</span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🫁</span>
+                  Immunotherapy
+                </strong>
+                <span>lung cancer patient receiving immunotherapy</span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧪</span>
+                  Kidney Disease
+                </strong>
+                <span>chronic kidney disease and hypertension</span>
+              </div>
+            </div>
+
+            <h2>Interface Design Highlights</h2>
+
+            <p>
+              The interface is intentionally simple: users enter a clinical
+              concept in natural language, review ranked patient cards, and
+              inspect the attributes that make a result relevant. The emphasis
+              is on demonstrating the retrieval pattern clearly rather than
+              overwhelming the user with enterprise workflow features.
+            </p>
+
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🔎</span>
+                  Query Input
+                </strong>
+                <span>
+                  Lets users search with natural-language clinical concepts.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">📋</span>
+                  Ranked Results
+                </strong>
+                <span>
+                  Shows semantically similar synthetic patient records.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧾</span>
+                  Patient Context
+                </strong>
+                <span>
+                  Displays diagnoses, medications, labs, and clinical summary
+                  details.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">📊</span>
+                  Similarity Signal
+                </strong>
+                <span>
+                  Makes retrieval feel ranked and inspectable, not arbitrary.
+                </span>
+              </div>
+            </div>
+
+            <h2>Results and Takeaways</h2>
+
+            <p>
+              Even as a small portfolio app, the project demonstrates a
+              practical AI pattern: retrieval over mixed healthcare data using
+              embeddings and semantic similarity. It shows how search can become
+              more intuitive when users ask for concepts instead of exact field
+              values or keywords.
+            </p>
+
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🏥</span>
+                  Healthcare AI Pattern
+                </strong>
+                <span>
+                  Demonstrates applied AI in a realistic healthcare-oriented
+                  product scenario.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🔍</span>
+                  Better Discovery
+                </strong>
+                <span>
+                  Supports meaning-based search across mixed structured and
+                  unstructured data.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🧱</span>
+                  Reusable Foundation
+                </strong>
+                <span>
+                  Provides a foundation for RAG, cohort discovery, and agentic
+                  review workflows.
+                </span>
+              </div>
+
+              <div className="blogSignalCard">
+                <strong>
+                  <span className="blogIcon">🔐</span>
+                  Synthetic Data Only
+                </strong>
+                <span>
+                  Shows the concept safely without using real patient
+                  information.
+                </span>
+              </div>
+            </div>
 
             <figure className="blogFigure">
               <img
@@ -314,13 +567,15 @@ export default function BlogPost() {
             </figure>
 
             <h2>Important Note on Data</h2>
+
             <p>
               This demo uses <strong>synthetic sample data only</strong>. It
               contains no real patient information and is intended strictly for
               educational and portfolio purposes.
             </p>
 
-            <h2>Why It Matters</h2>
+            <h2>Final Reflection</h2>
+
             <p>
               Semantic search is not a full solution by itself, but it is a
               powerful foundation for building more intuitive discovery

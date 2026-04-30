@@ -12,7 +12,7 @@ export default function BlogPost() {
             TrainJazz: Turning Event Streams into Music with AI
           </h1>
 
-          <p className="blogMeta">Published Apr 2026 · by Jeffrey Ross</p>
+          <p className="blogMeta">Published 2026 · by Jeffrey Ross</p>
 
           <section className="blogProse">
             <p>
@@ -37,7 +37,7 @@ export default function BlogPost() {
             <figure className="blogFigure">
               <img
                 src="/images/train-jazz-flow.png"
-                alt="TrainJazz system architecture from event streams to real-time jazz composition"
+                alt="blog system architecture from event streams to real-time jazz composition"
               />
               <figcaption className="blogCaption">
                 Architecture: event streams → interpretation agent → composition
@@ -55,7 +55,7 @@ export default function BlogPost() {
             </p>
 
             <div className="blogCallout trainJazzCallout">
-              <span className="trainJazzCalloutIcon">🎷</span>
+              <span className="blogCalloutIcon">🎷</span>
               <div>
                 <strong>Core product concept:</strong> TrainJazz turns incoming
                 signals into rhythm, harmony, melody, and improvisation — making
@@ -72,27 +72,27 @@ export default function BlogPost() {
               patterns can influence melody or improvisation.
             </p>
 
-            <div className="trainJazzSignalGrid">
-              <div className="trainJazzSignalCard">
-                <span className="trainJazzIcon">⏱️</span>
+            <div className="blogSignalGrid">
+              <div className="blogSignalCard">
+                <span className="blogIcon">⏱️</span>
                 <strong>Event Timing</strong>
                 <span>Rhythm, pacing, tempo, and groove.</span>
               </div>
 
-              <div className="trainJazzSignalCard">
-                <span className="trainJazzIcon">🚦</span>
+              <div className="blogSignalCard">
+                <span className="blogIcon">🚦</span>
                 <strong>Event Type</strong>
                 <span>Instrument layer and musical role.</span>
               </div>
 
-              <div className="trainJazzSignalCard">
-                <span className="trainJazzIcon">📈</span>
+              <div className="blogSignalCard">
+                <span className="blogIcon">📈</span>
                 <strong>Signal Intensity</strong>
                 <span>Volume, density, dynamics, and energy.</span>
               </div>
 
-              <div className="trainJazzSignalCard">
-                <span className="trainJazzIcon">🎼</span>
+              <div className="blogSignalCard">
+                <span className="blogIcon">🎼</span>
                 <strong>Patterns</strong>
                 <span>Melody, harmony, motifs, and variation.</span>
               </div>
@@ -106,9 +106,9 @@ export default function BlogPost() {
               musical decision-making, orchestration, and audio playback.
             </p>
 
-            <div className="trainJazzArchitectureStack">
-              <div className="trainJazzArchitectureItem">
-                <div className="trainJazzArchitectureNumber">01</div>
+            <div className="blogArchitectureStack">
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">01</div>
                 <div>
                   <h3>Event Stream Layer</h3>
                   <p>
@@ -118,8 +118,8 @@ export default function BlogPost() {
                 </div>
               </div>
 
-              <div className="trainJazzArchitectureItem">
-                <div className="trainJazzArchitectureNumber">02</div>
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">02</div>
                 <div>
                   <h3>Interpretation Agent</h3>
                   <p>
@@ -129,8 +129,8 @@ export default function BlogPost() {
                 </div>
               </div>
 
-              <div className="trainJazzArchitectureItem">
-                <div className="trainJazzArchitectureNumber">03</div>
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">03</div>
                 <div>
                   <h3>Composition Agents</h3>
                   <p>
@@ -140,8 +140,8 @@ export default function BlogPost() {
                 </div>
               </div>
 
-              <div className="trainJazzArchitectureItem">
-                <div className="trainJazzArchitectureNumber">04</div>
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">04</div>
                 <div>
                   <h3>Orchestration Layer</h3>
                   <p>
@@ -151,8 +151,8 @@ export default function BlogPost() {
                 </div>
               </div>
 
-              <div className="trainJazzArchitectureItem">
-                <div className="trainJazzArchitectureNumber">05</div>
+              <div className="blogArchitectureItem">
+                <div className="blogArchitectureNumber">05</div>
                 <div>
                   <h3>Audio Engine and UI</h3>
                   <p>
@@ -170,30 +170,30 @@ export default function BlogPost() {
               system behavior underneath.
             </p>
 
-            <div className="trainJazzFlowGrid">
-              <div className="trainJazzFlowCard">
+            <div className="blogFlowGrid">
+              <div className="blogFlowCard">
                 <span>1</span>
                 User starts the audio experience.
               </div>
-              <div className="trainJazzFlowCard">
+              <div className="blogFlowCard">
                 <span>2</span>
                 The system begins ingesting simulated train event signals.
               </div>
-              <div className="trainJazzFlowCard">
+              <div className="blogFlowCard">
                 <span>3</span>
                 The AI conductor interprets the live stream.
               </div>
-              <div className="trainJazzFlowCard">
+              <div className="blogFlowCard">
                 <span>4</span>
                 Composition agents adjust rhythm, harmony, melody, and
                 improvisation.
               </div>
-              <div className="trainJazzFlowCard">
+              <div className="blogFlowCard">
                 <span>5</span>
                 The dashboard updates with live events, agent state, and musical
                 activity.
               </div>
-              <div className="trainJazzFlowCard">
+              <div className="blogFlowCard">
                 <span>6</span>
                 The output evolves as the event stream changes.
               </div>
@@ -208,10 +208,10 @@ export default function BlogPost() {
               responsive user experience design.
             </p>
 
-            <div className="trainJazzWhyGrid">
-              <div className="trainJazzWhyCard">
-                <h3 className="trainJazzWhyTitle">
-                  <span className="trainJazzIcon">⚡</span>
+            <div className="blogWhyGrid">
+              <div className="blogWhyCard">
+                <h3 className="blogWhyTitle">
+                  <span className="blogIcon">⚡</span>
                   Real-time systems
                 </h3>
                 <p>
@@ -220,9 +220,9 @@ export default function BlogPost() {
                 </p>
               </div>
 
-              <div className="trainJazzWhyCard">
-                <h3 className="trainJazzWhyTitle">
-                  <span className="trainJazzIcon">🤝</span>
+              <div className="blogWhyCard">
+                <h3 className="blogWhyTitle">
+                  <span className="blogIcon">🤝</span>
                   Agentic coordination
                 </h3>
                 <p>
@@ -230,9 +230,9 @@ export default function BlogPost() {
                 </p>
               </div>
 
-              <div className="trainJazzWhyCard">
-                <h3 className="trainJazzWhyTitle">
-                  <span className="trainJazzIcon">🔎</span>
+              <div className="blogWhyCard">
+                <h3 className="blogWhyTitle">
+                  <span className="blogIcon">🔎</span>
                   Explainable behavior
                 </h3>
                 <p>
@@ -241,9 +241,9 @@ export default function BlogPost() {
                 </p>
               </div>
 
-              <div className="trainJazzWhyCard">
-                <h3 className="trainJazzWhyTitle">
-                  <span className="trainJazzIcon">🎧</span>
+              <div className="blogWhyCard">
+                <h3 className="blogWhyTitle">
+                  <span className="blogIcon">🎧</span>
                   Creative AI interface
                 </h3>
                 <p>

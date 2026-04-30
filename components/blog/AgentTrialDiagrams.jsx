@@ -22,10 +22,6 @@ export function TrialWorkflowDiagram() {
   return (
     <figure className="trialDiagramFigure">
       <div className="trialDiagramSurface">
-        <h3 className="trialDiagramTitle">
-          Agentic clinical trial eligibility workflow
-        </h3>
-
         <div className="trialWorkflowGrid">
           <Card className="trialWorkflowInputGroup">
             <div className="trialDiagramEyebrow">Inputs</div>

@@ -18,7 +18,7 @@ export default function BlogPost() {
             Concordance Testing in Regulated Data Platforms
           </h1>
 
-          <p className="blogMeta">Published Feb 11, 2026 · by Jeff Ross</p>
+          <p className="blogMeta">Published Feb 2026 · by Jeff Ross</p>
 
           <section className="blogProse">
             <p>

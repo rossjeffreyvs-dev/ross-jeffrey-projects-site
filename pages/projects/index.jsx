@@ -11,18 +11,18 @@ const projects = [
       "An AI-powered, multi-agent system that evaluates patient eligibility for clinical trials in real time. It combines semantic search, protocol interpretation, and explainable reasoning to identify high-quality matches and support human-in-the-loop review workflows.",
   },
   {
-    title: "Claude Clinical Protocol Reasoning",
-    icon: "🧠",
-    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine",
-    summary:
-      "A Claude-style clinical reasoning demo that interprets protocol eligibility language, evaluates synthetic patient evidence, and produces transparent criterion-level recommendations with audit-friendly reasoning traces.",
-  },
-  {
     title: "Agentic Customer Lifecycle",
     icon: "⚙️",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-customer-lifecycle-platform",
     summary:
       "AI-powered multi-agent system that optimizes onboarding, activation, and retention by detecting drop-offs, prioritizing interventions, and quantifying revenue impact across the customer journey.",
+  },
+  {
+    title: "Claude Clinical Protocol Reasoning",
+    icon: "🧠",
+    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine",
+    summary:
+      "A Claude-style clinical reasoning demo that interprets protocol eligibility language, evaluates synthetic patient evidence, and produces transparent criterion-level recommendations with audit-friendly reasoning traces.",
   },
   {
     title: "Semantic Search",
@@ -44,6 +44,13 @@ const projects = [
     href: "https://fx-insights.jeffrey-ross.me",
     summary:
       "Intelligent market analysis application that delivers concise, real-time foreign exchange summaries using large language models. It synthesizes macroeconomic signals, currency movements, and market sentiment into actionable insights.",
+  },
+  {
+    title: "TrainJazz — AI Music + Data Stream Orchestration",
+    icon: "🎷",
+    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/train-jazz",
+    summary:
+      "An interactive AI system that transforms live or simulated event streams into dynamic jazz compositions. TrainJazz maps structured data (events, timing, signals) into musical patterns in real time, using agentic orchestration to coordinate rhythm, harmony, and improvisation layers. It demonstrates how AI can bridge data systems and creative expression through streaming workflows and responsive UI.",
   },
 ];
 

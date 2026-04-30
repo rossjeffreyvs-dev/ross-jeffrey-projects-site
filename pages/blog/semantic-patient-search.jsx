@@ -18,7 +18,7 @@ export default function BlogPost() {
             Building a Semantic Search Demo for Synthetic Healthcare Data
           </h1>
 
-          <p className="blogMeta">Published Apr 18, 2026 · by Jeff Ross</p>
+          <p className="blogMeta">Published Feb 2026 · by Jeff Ross</p>
 
           <section className="blogProse">
             <p>

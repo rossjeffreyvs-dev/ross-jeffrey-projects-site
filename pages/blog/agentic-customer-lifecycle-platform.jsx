@@ -19,7 +19,7 @@ export default function BlogPost() {
             Workflow
           </h1>
 
-          <p className="blogMeta">Published Apr 27, 2026 · by Jeff Ross</p>
+          <p className="blogMeta">Published Apr 2026 · by Jeff Ross</p>
 
           <section className="blogProse">
             <p>

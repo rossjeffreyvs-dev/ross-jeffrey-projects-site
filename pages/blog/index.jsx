@@ -4,13 +4,6 @@ import Link from "next/link";
 
 const posts = [
   {
-    title: "Claude Clinical Protocol Reasoning",
-    icon: "🧠",
-    summary:
-      "A project write-up on designing a Claude-style reasoning workflow for clinical protocol interpretation, synthetic patient evaluation, eligibility recommendations, and transparent audit trails.",
-    href: "/blog/claude-clinical-protocol-reasoning-engine",
-  },
-  {
     title: "Agentic Clinical Trial Eligibility",
     icon: "🧬",
     summary:
@@ -18,18 +11,25 @@ const posts = [
     href: "/blog/agentic-clinical-trial-eligibility",
   },
   {
-    title: "Semantic Search",
-    icon: "🔎",
-    summary:
-      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords.",
-    href: "/blog/semantic-patient-search",
-  },
-  {
     title: "Agentic Customer Lifecycle Platform",
     icon: "⚙️",
     summary:
       "A multi-agent lifecycle system that ingests prospects, evaluates fit and stage, detects revenue blockers, and guides human decision-making to unlock conversion and maximize revenue impact.",
     href: "/blog/agentic-customer-lifecycle-platform",
+  },
+  {
+    title: "Claude Clinical Protocol Reasoning",
+    icon: "🧠",
+    summary:
+      "A project write-up on designing a Claude-style reasoning workflow for clinical protocol interpretation, synthetic patient evaluation, eligibility recommendations, and transparent audit trails.",
+    href: "/blog/claude-clinical-protocol-reasoning-engine",
+  },
+  {
+    title: "Semantic Search",
+    icon: "🔎",
+    summary:
+      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords.",
+    href: "/blog/semantic-patient-search",
   },
   {
     title: "Common Data Model",
@@ -44,6 +44,13 @@ const posts = [
     summary:
       "Concordance testing is the backbone of trustworthy data migrations and integrations, especially in regulated clinical research environments.",
     href: "/blog/concordance-testing",
+  },
+  {
+    title: "TrainJazz — Turning Event Streams into Music with AI",
+    icon: "🎷",
+    summary:
+      "TrainJazz is an experiment in mapping structured event streams to music generation. Using an agentic architecture, the system listens to incoming signals, interprets patterns, and translates them into evolving jazz compositions in real time. This project explores streaming systems, human-in-the-loop interaction, and the boundary between analytical and creative AI applications.",
+    href: "/blog/train-jazz",
   },
 ];
 

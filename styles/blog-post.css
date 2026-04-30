@@ -1,22 +1,6 @@
 /* styles/blog-post.css
-   Blog post layout styles (reference styles for blog pages)
-   Intended to replace per-element Tailwind utility classes in blog post JSX.
+   Blog index, blog post, diagram, and TrainJazz-specific styles.
 */
-
-:root {
-  color-scheme: light dark;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 /* -------------------------------------------------------------------------- */
 /* Shared blog layout                                                         */
@@ -99,11 +83,10 @@ html.dark .blogIndexTitle {
   color: #f9fafb;
 }
 
-.blogIndexIntro,
-.projectsIntro {
+.blogIndexIntro {
   margin-top: 16px;
   width: 100%;
-  max-width: none; /* ← remove constraint */
+  max-width: none;
   color: #475569;
   font-size: 18px;
   line-height: 1.6;
@@ -295,7 +278,11 @@ html.dark .blogIndexReadMore {
   color: #374151;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0;
+}
+
+.blogProse > *:first-child {
+  margin-top: 0;
 }
 
 html.dark .blogProse {
@@ -303,7 +290,7 @@ html.dark .blogProse {
 }
 
 .blogProse h2 {
-  margin: 2.25rem 0 0.75rem;
+  margin: 2.25rem 0 0.35rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -338,6 +325,16 @@ html.dark .blogProse h3 {
 
 .blogProse li {
   margin: 0.5rem 0;
+}
+
+.blogCallout,
+.blogFigure,
+.trainJazzSignalGrid,
+.trainJazzArchitectureStack,
+.trainJazzFlowGrid,
+.trainJazzWhyGrid {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .blogCallout {
@@ -423,7 +420,6 @@ html.dark .blogCaption {
     0 12px 30px rgba(15, 23, 42, 0.06);
 }
 
-/* workflow */
 .trialWorkflowGrid {
   display: grid;
   grid-template-columns: 1.2fr 56px 1fr 56px 1.35fr;
@@ -561,7 +557,6 @@ html.dark .blogCaption {
   padding-left: 1.1rem;
 }
 
-/* architecture */
 .trialArchitectureWrap {
   position: relative;
   padding-top: 0.5rem;
@@ -641,7 +636,6 @@ html.dark .blogCaption {
   background: #eef4ff;
 }
 
-/* system */
 .trialSystemStack {
   width: min(760px, 100%);
   margin: 0 auto;
@@ -671,7 +665,6 @@ html.dark .blogCaption {
   line-height: 1;
 }
 
-/* hitl */
 .trialHitlWrap {
   position: relative;
   width: min(780px, 100%);
@@ -756,13 +749,15 @@ html.dark .blogCaption {
   border-right: none;
 }
 
-/* responsive */
 @media (max-width: 1080px) {
   .trialWorkflowGrid {
     grid-template-columns: 1fr;
   }
 
-  .trialWorkflowConnector {
+  .trialWorkflowConnector,
+  .trialArchitectureAgent::before,
+  .trialArchitectureLines,
+  .trialHitlLoop {
     display: none;
   }
 
@@ -774,11 +769,6 @@ html.dark .blogCaption {
 
   .trialArchitectureBottom {
     grid-template-columns: 1fr;
-  }
-
-  .trialArchitectureAgent::before,
-  .trialArchitectureLines {
-    display: none;
   }
 
   .trialHitlWrap {
@@ -793,11 +783,11 @@ html.dark .blogCaption {
     transform: none;
     width: 100%;
   }
-
-  .trialHitlLoop {
-    display: none;
-  }
 }
+
+/* -------------------------------------------------------------------------- */
+/* General diagrams                                                           */
+/* -------------------------------------------------------------------------- */
 
 .blogDiagram {
   display: grid;
@@ -807,16 +797,12 @@ html.dark .blogCaption {
 }
 
 .lifecycleDiagram,
-.architectureDiagram {
+.agentDiagram {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .architectureDiagram {
   grid-template-columns: repeat(7, minmax(0, auto));
-}
-
-.agentDiagram {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .diagramBox {
@@ -875,5 +861,208 @@ html.dark .blogCaption {
 
   .diagramArrow {
     transform: rotate(90deg);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* TrainJazz blog post                                                        */
+/* -------------------------------------------------------------------------- */
+
+.trainJazzCallout {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.trainJazzCalloutIcon {
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  line-height: 1;
+  transform: translateY(0.1rem);
+}
+
+.trainJazzSignalGrid,
+.trainJazzWhyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.trainJazzSignalCard,
+.trainJazzWhyCard,
+.trainJazzArchitectureItem,
+.trainJazzFlowCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+.trainJazzSignalCard {
+  min-height: 150px;
+  padding: 1.15rem;
+}
+
+.trainJazzSignalCard strong {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 0.35rem;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.trainJazzSignalCard .trainJazzIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.55rem;
+  font-size: 1.35rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.trainJazzSignalCard span:last-child {
+  display: block;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.trainJazzIcon {
+  display: inline-flex;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.trainJazzArchitectureStack {
+  display: grid;
+  gap: 1rem;
+}
+
+.trainJazzArchitectureItem {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.1rem;
+}
+
+.trainJazzArchitectureNumber {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 1rem;
+  background: #eef4ff;
+  color: #1e3a8a;
+  border: 1px solid #dbe4f0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.trainJazzArchitectureItem h3 {
+  margin: 0 0 0.4rem;
+  color: #0f172a;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.trainJazzArchitectureItem p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.trainJazzFlowGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.trainJazzFlowCard {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.trainJazzFlowCard span {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #1e3a8a;
+  border: 1px solid #dbe4f0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+}
+
+.trainJazzWhyCard {
+  padding: 1rem;
+}
+
+.trainJazzWhyTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.45rem;
+  color: #0f172a;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.trainJazzWhyTitle .trainJazzIcon {
+  flex: 0 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.trainJazzWhyTitle span:last-child {
+  display: inline-block;
+}
+
+.trainJazzWhyCard p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .trainJazzSignalGrid,
+  .trainJazzWhyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trainJazzFlowGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .trainJazzSignalGrid,
+  .trainJazzWhyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainJazzArchitectureItem {
+    grid-template-columns: 1fr;
   }
 }

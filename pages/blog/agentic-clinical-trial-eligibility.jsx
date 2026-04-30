@@ -19,7 +19,7 @@ export default function BlogPost() {
             Workflow
           </h1>
 
-          <p className="blogMeta">Published Apr 23, 2026 · by Jeff Ross</p>
+          <p className="blogMeta">Published Mar 2026 · by Jeff Ross</p>
 
           <section className="blogProse">
             <p>
@@ -35,6 +35,8 @@ export default function BlogPost() {
               criteria-level evidence, and routes ambiguous cases into human
               review.
             </p>
+
+            <div>&nbsp;</div>
 
             <p>
               Rather than presenting trial matching as a single opaque AI

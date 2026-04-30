@@ -23,3 +23,294 @@
     @apply list-disc pl-6 space-y-2;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/* Home page                                                                  */
+/* -------------------------------------------------------------------------- */
+
+.homePage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  color: #111827;
+}
+
+html.dark .homePage {
+  background: #000000;
+  color: #f9fafb;
+}
+
+.homeMain {
+  flex-grow: 1;
+  padding-top: 3rem;
+}
+
+.homeHero {
+  padding: 3.25rem 1rem 3.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+html.dark .homeHero {
+  background: linear-gradient(180deg, #000000 0%, #020617 100%);
+}
+
+.homeHeroInner {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homeHeroTitle {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(2.25rem, 5.2vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+}
+
+html.dark .homeHeroTitle {
+  color: #f9fafb;
+}
+
+.homeHeroText {
+  max-width: 720px;
+  margin: 1.25rem auto 0;
+  color: #475569;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
+}
+
+html.dark .homeHeroText {
+  color: #9ca3af;
+}
+
+.homeHeroActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.homeButton {
+  width: 100%;
+  max-width: 280px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.homeButton:hover {
+  transform: translateY(-1px);
+}
+
+.homeButtonPrimary {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+.homeButtonPrimary:hover {
+  background: #020617;
+  border-color: #020617;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+}
+
+.homeButtonSecondary {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.homeButtonSecondary:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+html.dark .homeButtonSecondary {
+  background: #020617;
+  color: #f9fafb;
+  border-color: #334155;
+}
+
+html.dark .homeButtonSecondary:hover {
+  background: #0f172a;
+  border-color: #475569;
+}
+
+.homeLogoStrip {
+  padding: 2.75rem 1rem;
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+html.dark .homeLogoStrip {
+  background: #111827;
+}
+
+.homeLogoRow {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.75rem, 5vw, 3.5rem);
+}
+
+.homeLogoRow img {
+  height: 6rem;
+  width: auto;
+  opacity: 0.72;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.homeLogoRow img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.homeConfidence {
+  padding: 3.5rem 1rem 5rem;
+  background: #ffffff;
+}
+
+html.dark .homeConfidence {
+  background: #000000;
+}
+
+.homeConfidenceInner {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homeSectionTitle {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  font-weight: 900;
+}
+
+html.dark .homeSectionTitle {
+  color: #f9fafb;
+}
+
+.homeWhyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.homeWhyCard {
+  text-align: left;
+  padding: 1.35rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+}
+
+html.dark .homeWhyCard {
+  background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+  border-color: #1f2937;
+}
+
+.homeWhyTitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0 0 0.65rem;
+  color: #0f172a;
+  font-size: 1.08rem;
+  line-height: 1.3;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+html.dark .homeWhyTitle {
+  color: #f9fafb;
+}
+
+.homeWhyIcon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  min-width: 1.45rem;
+  height: 1.45rem;
+  font-size: 1.05rem;
+  line-height: 1;
+  transform: translateY(0.05rem);
+}
+
+.homeWhyCard p {
+  margin: 0;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+html.dark .homeWhyCard p {
+  color: #9ca3af;
+}
+
+@media (min-width: 640px) {
+  .homeHeroActions {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .homeButton {
+    width: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .homeWhyGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .homeMain {
+    padding-top: 2.25rem;
+  }
+
+  .homeHero {
+    padding: 3rem 1rem 3.25rem;
+  }
+
+  .homeLogoRow img {
+    height: 4.5rem;
+  }
+
+  .homeWhyCard {
+    padding: 1.15rem;
+  }
+}

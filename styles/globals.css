@@ -65,9 +65,11 @@ html.dark .homeHero {
   margin: 0;
   color: #0f172a;
   font-size: clamp(2.25rem, 5.2vw, 3.5rem);
-  line-height: 1.02;
-  letter-spacing: -0.055em;
-  font-weight: 900;
+
+  /* 👇 key fixes */
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-weight: 700;
 }
 
 html.dark .homeHeroTitle {
@@ -191,7 +193,7 @@ html.dark .homeLogoStrip {
 }
 
 .homeConfidence {
-  padding: 3.5rem 1rem 5rem;
+  padding: 3rem 1rem 2.5rem;
   background: #ffffff;
 }
 
@@ -210,8 +212,8 @@ html.dark .homeConfidence {
   color: #0f172a;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   line-height: 1.15;
-  letter-spacing: -0.035em;
-  font-weight: 900;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 html.dark .homeSectionTitle {

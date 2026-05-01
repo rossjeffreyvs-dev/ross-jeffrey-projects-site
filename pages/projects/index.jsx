@@ -32,11 +32,11 @@ const projects = [
       "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords—supporting faster cohort discovery and data exploration.",
   },
   {
-    title: "AI Résumé Match",
-    icon: "📄",
-    href: "https://resume-analyzer.jeffrey-ross.me",
+    title: "TrainJazz — AI Music + Data Stream Orchestration",
+    icon: "🎷",
+    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/train-jazz",
     summary:
-      "AI-powered application that evaluates how well a résumé aligns with a job description. It analyzes skills, experience, and qualifications to highlight matches, identify gaps, and provide actionable suggestions.",
+      "An interactive AI system that transforms live or simulated event streams into dynamic jazz compositions. TrainJazz maps structured data (events, timing, signals) into musical patterns in real time, using agentic orchestration to coordinate rhythm, harmony, and improvisation layers. It demonstrates how AI can bridge data systems and creative expression through streaming workflows and responsive UI.",
   },
   {
     title: "AI FX Insights",
@@ -46,11 +46,11 @@ const projects = [
       "Intelligent market analysis application that delivers concise, real-time foreign exchange summaries using large language models. It synthesizes macroeconomic signals, currency movements, and market sentiment into actionable insights.",
   },
   {
-    title: "TrainJazz — AI Music + Data Stream Orchestration",
-    icon: "🎷",
-    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/train-jazz",
+    title: "AI Résumé Match",
+    icon: "📄",
+    href: "https://resume-analyzer.jeffrey-ross.me",
     summary:
-      "An interactive AI system that transforms live or simulated event streams into dynamic jazz compositions. TrainJazz maps structured data (events, timing, signals) into musical patterns in real time, using agentic orchestration to coordinate rhythm, harmony, and improvisation layers. It demonstrates how AI can bridge data systems and creative expression through streaming workflows and responsive UI.",
+      "AI-powered application that evaluates how well a résumé aligns with a job description. It analyzes skills, experience, and qualifications to highlight matches, identify gaps, and provide actionable suggestions.",
   },
 ];
 

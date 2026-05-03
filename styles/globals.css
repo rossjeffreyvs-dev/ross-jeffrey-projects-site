@@ -66,7 +66,7 @@ html.dark .homeHero {
   color: #0f172a;
   font-size: clamp(2.25rem, 5.2vw, 3.5rem);
 
-  /* 👇 key fixes */
+  /* ðŸ‘‡ key fixes */
   line-height: 1.1;
   letter-spacing: -0.015em;
   font-weight: 700;

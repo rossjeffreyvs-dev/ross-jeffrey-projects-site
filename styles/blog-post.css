@@ -89,7 +89,7 @@ html.dark .blogIndexTitle {
   max-width: none;
   color: #475569;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 html.dark .blogIndexIntro {
@@ -154,7 +154,7 @@ html.dark .blogIndexCard:hover {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .blogIndexCardIcon {
@@ -171,8 +171,8 @@ html.dark .blogIndexCard:hover {
 
 .blogIndexCardTitle {
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.2rem;
+  line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #111827;
@@ -185,8 +185,8 @@ html.dark .blogIndexCardTitle {
 .blogIndexSummary {
   margin: 0;
   color: #4b5563;
-  font-size: 1.02rem;
-  line-height: 1.75;
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
 html.dark .blogIndexSummary {
@@ -195,7 +195,7 @@ html.dark .blogIndexSummary {
 
 .blogIndexCardFooter {
   margin-top: auto;
-  padding-top: 1.5rem;
+  padding-top: 1.1rem;
 }
 
 .blogIndexReadMore {
@@ -237,7 +237,7 @@ html.dark .blogIndexReadMore {
 
   .blogIndexIntro {
     font-size: 1rem;
-    line-height: 1.75;
+    line-height: 1.6;
   }
 
   .blogIndexCard {
@@ -250,7 +250,8 @@ html.dark .blogIndexReadMore {
   }
 
   .blogIndexSummary {
-    font-size: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
   }
 }
 
@@ -422,39 +423,39 @@ html.dark .blogCaption {
 }
 
 .agentDiagram .diagramBox:nth-child(1) strong::before {
-  content: "📥";
+  content: "ðŸ“¥";
 }
 
 .agentDiagram .diagramBox:nth-child(3) strong::before {
-  content: "📊";
+  content: "ðŸ“Š";
 }
 
 .agentDiagram .diagramBox:nth-child(5) strong::before {
-  content: "💰";
+  content: "ðŸ’°";
 }
 
 .agentDiagram .diagramBox:nth-child(7) strong::before {
-  content: "👤";
+  content: "ðŸ‘¤";
 }
 
 .agentDiagram .diagramBox:nth-child(9) strong::before {
-  content: "🔁";
+  content: "ðŸ”";
 }
 
 .architectureDiagram .diagramBox:nth-child(1) strong::before {
-  content: "🖥️";
+  content: "ðŸ–¥ï¸";
 }
 
 .architectureDiagram .diagramBox:nth-child(3) strong::before {
-  content: "⚙️";
+  content: "âš™ï¸";
 }
 
 .architectureDiagram .diagramBox:nth-child(5) strong::before {
-  content: "🗂️";
+  content: "ðŸ—‚ï¸";
 }
 
 .architectureDiagram .diagramBox:nth-child(7) strong::before {
-  content: "🧠";
+  content: "ðŸ§ ";
 }
 
 .diagramBox span {
@@ -1104,8 +1105,8 @@ html.dark .blogCaption {
 
 .blogWhyCard {
   padding: 0.7rem 0.9rem;
-  min-height: unset; /* 🔥 MOST IMPORTANT */
-  align-items: start; /* 🔥 CRITICAL */
+  min-height: unset; /* ðŸ”¥ MOST IMPORTANT */
+  align-items: start; /* ðŸ”¥ CRITICAL */
   height: auto;
 }
 
@@ -1115,7 +1116,7 @@ html.dark .blogCaption {
   color: #0f172a;
   font-size: 1.05rem;
   font-weight: 900;
-  margin: 0 0 0.25rem; /* ↓ tighter gap */
+  margin: 0 0 0.25rem; /* â†“ tighter gap */
   gap: 0.4rem;
   line-height: 1.2;
 }
@@ -1431,7 +1432,7 @@ html.dark .blogCaption {
   line-height: 1.6;
 }
 
-/* Main Flow (LEFT → MIDDLE → RIGHT) */
+/* Main Flow (LEFT â†’ MIDDLE â†’ RIGHT) */
 
 .cdmOntologyFlow {
   display: grid;
@@ -1582,7 +1583,7 @@ html.dark .blogCaption {
 
 .concordanceHeader {
   max-width: 100%;
-  margin-bottom: 1.25rem; /* ↓ tighter */
+  margin-bottom: 1.25rem; /* â†“ tighter */
 }
 
 .concordanceEyebrow {
@@ -1597,7 +1598,7 @@ html.dark .blogCaption {
 
 .concordanceHeader h2 {
   margin: 0;
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem); /* ↓ reduced */
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem); /* â†“ reduced */
   color: #0f172a;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -1609,7 +1610,7 @@ html.dark .blogCaption {
   color: #475569;
   font-size: 0.95rem;
   line-height: 1.5;
-  max-width: 100%; /* 🔥 remove narrow constraint */
+  max-width: 100%; /* ðŸ”¥ remove narrow constraint */
 }
 
 .concordanceFlow {
@@ -1994,7 +1995,7 @@ html.dark .blogCaption {
 }
 
 .concordanceAlertRouteLine::after {
-  content: "→";
+  content: "â†’";
   position: absolute;
   right: -0.2rem;
   top: 50%;
@@ -2061,7 +2062,7 @@ html.dark .blogCaption {
   }
 
   .concordanceAlertRouteLine::after {
-    content: "↓";
+    content: "â†“";
     right: auto;
     top: auto;
     bottom: -1.1rem;

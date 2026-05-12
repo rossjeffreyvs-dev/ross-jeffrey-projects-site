@@ -18,6 +18,13 @@ const projects = [
       "AI-powered multi-agent system that optimizes onboarding, activation, and retention by detecting drop-offs, prioritizing interventions, and quantifying revenue impact across the customer journey.",
   },
   {
+    title: "Agentic Startup Finance & Operations",
+    icon: "💰",
+    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-startup-finance-ops",
+    summary:
+      "AI-powered multi-agent system that simulates how startup finance and operations teams interpret founder questions, analyze runway and revenue risk, coordinate operational tools, and generate explainable recommendations for human review.",
+  },
+  {
     title: "Claude Clinical Protocol Reasoning",
     icon: "🧠",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine",
@@ -36,7 +43,7 @@ const projects = [
     icon: "🎷",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/train-jazz",
     summary:
-      "An interactive AI system that transforms live or simulated event streams into dynamic jazz compositions. TrainJazz maps structured data (events, timing, signals) into musical patterns in real time, using agentic orchestration to coordinate rhythm, harmony, and improvisation layers. It demonstrates how AI can bridge data systems and creative expression through streaming workflows and responsive UI.",
+      "An interactive AI system that transforms live or simulated event streams into dynamic jazz compositions. TrainJazz maps structured data into musical patterns in real time, using agentic orchestration to coordinate rhythm, harmony, and improvisation layers.",
   },
   {
     title: "AI FX Insights",
@@ -64,9 +71,10 @@ export default function Projects() {
           <h1 className="projectsTitle">Portfolio Projects</h1>
           <p className="blogIndexIntro">
             A collection of applied AI and data product demos spanning clinical
-            reasoning, semantic search, lifecycle automation, résumé analysis,
-            and market intelligence. Each project is designed to show both the
-            user experience and the underlying product architecture.
+            reasoning, semantic search, lifecycle automation, startup finance,
+            résumé analysis, and market intelligence. Each project is designed
+            to show both the user experience and the underlying product
+            architecture.
           </p>
         </section>
 

@@ -10,14 +10,17 @@ export default function Home() {
       <main className="homeMain">
         <section className="homeHero">
           <div className="homeHeroInner">
+            <p className="homeHeroEyebrow">
+              AI PLATFORMS • DATA SYSTEMS • WORKFLOW ORCHESTRATION
+            </p>
+
             <h1 className="homeHeroTitle">
-              Where AI, Product Vision, and Engineering Meet
+              Designing Data and AI Systems for Complex Workflows
             </h1>
 
             <p className="homeHeroText">
-              Bridging advanced AI research with real-world product execution.
-              From GPT-powered agents to enterprise-scale platforms — I build
-              impactful tools that ship.
+              I design data and AI systems that connect product strategy,
+              workflow orchestration, and hands-on engineering execution.
             </p>
 
             <div className="homeHeroActions">
@@ -33,7 +36,7 @@ export default function Home() {
                 View Résumé
               </Link>
 
-              <Link href="/contact" className="homeButton homeButtonSecondary">
+              <Link href="/contact" className="homeButton homeButtonTertiary">
                 Contact Me
               </Link>
             </div>
@@ -41,16 +44,24 @@ export default function Home() {
         </section>
 
         <section className="homeLogoStrip" aria-label="Experience highlights">
-          <div className="homeLogoRow">
-            <img src="/logos/mskcc.png" alt="MSKCC" />
-            <img src="/logos/euromoney.png" alt="Euromoney" />
-            <img src="/logos/palantir.png" alt="Palantir" />
-            <img src="/logos/salesforce.png" alt="Salesforce" />
+          <div className="homeLogoInner">
+            <p className="homeLogoEyebrow">
+              Experience across enterprise platforms
+            </p>
+            <div className="homeLogoRow">
+              <img src="/logos/mskcc.png" alt="MSKCC" />
+              <img src="/logos/euromoney.png" alt="Euromoney" />
+              <img src="/logos/palantir.png" alt="Palantir" />
+              <img src="/logos/salesforce.png" alt="Salesforce" />
+            </div>
           </div>
         </section>
 
         <section className="homeConfidence">
           <div className="homeConfidenceInner">
+            <p className="homeSectionEyebrow">
+              Product leadership + engineering execution
+            </p>
             <h2 className="homeSectionTitle">
               Why Teams Build with Confidence
             </h2>
@@ -64,8 +75,9 @@ export default function Home() {
                 <p>
                   Built enterprise-scale biobanking operations, data
                   infrastructure, and AI workflows at Memorial Sloan Kettering,
-                  integrating LIMS SaaS, Palantir Foundry, and GPT-5 to
-                  streamline research and accelerate trial eligibility analysis.
+                  integrating LIMS SaaS, Palantir Foundry, and LLM-powered
+                  workflows to streamline research and accelerate trial
+                  eligibility analysis.
                 </p>
               </article>
 
@@ -76,9 +88,9 @@ export default function Home() {
                 </h3>
                 <p>
                   Led modernization of $100M global platforms at Euromoney
-                  Institutional Investor—architecting Salesforce and Azure-based
-                  SaaS systems that improved operational efficiency and grew
-                  digital revenue 15% YoY.
+                  Institutional Investor, architecting Salesforce and
+                  Azure-based SaaS systems that improved operational efficiency
+                  and grew digital revenue 15% YoY.
                 </p>
               </article>
 
@@ -91,7 +103,7 @@ export default function Home() {
                   Created and scaled multiple SaaS ventures, from social
                   networking at SixDegrees.com to content and campaign
                   platforms, combining hands-on coding expertise with product
-                  vision and user-centric design.
+                  vision and user-centered design.
                 </p>
               </article>
             </div>

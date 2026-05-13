@@ -7,58 +7,77 @@ const projects = [
     title: "Agentic Clinical Trial Eligibility",
     icon: "🧬",
     href: "https://clinical-trial-patient-agent.jeffrey-ross.me/",
+    tags: ["Multi-Agent", "Clinical AI", "HITL Review"],
     summary:
-      "An AI-powered, multi-agent system that evaluates patient eligibility for clinical trials in real time. It combines semantic search, protocol interpretation, and explainable reasoning to identify high-quality matches and support human-in-the-loop review workflows.",
+      "Multi-agent eligibility evaluation that combines semantic search, protocol interpretation, and explainable reasoning to surface high-quality clinical trial matches for human review.",
   },
   {
     title: "Agentic Customer Lifecycle",
     icon: "⚙️",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-customer-lifecycle-platform",
+    tags: ["Lifecycle AI", "Revenue Ops", "Workflow"],
     summary:
-      "AI-powered multi-agent system that optimizes onboarding, activation, and retention by detecting drop-offs, prioritizing interventions, and quantifying revenue impact across the customer journey.",
+      "Agentic workflow that detects onboarding and activation drop-offs, prioritizes customer interventions, and quantifies revenue impact across the lifecycle journey.",
   },
   {
-    title: "Agentic Startup Finance & Operations",
+    title: "Startup Finance Ops",
     icon: "💰",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-startup-finance-ops",
+    tags: ["Finance Ops", "Runway Risk", "Tool Events"],
     summary:
-      "AI-powered multi-agent system that simulates how startup finance and operations teams interpret founder questions, analyze runway and revenue risk, coordinate operational tools, and generate explainable recommendations for human review.",
+      "Multi-agent finance and operations platform that interprets founder questions, analyzes runway and revenue risk, coordinates operational signals, and recommends next actions.",
   },
   {
     title: "Claude Clinical Protocol Reasoning",
     icon: "🧠",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine",
+    tags: ["Protocol AI", "Audit Trace", "Reasoning"],
     summary:
-      "A Claude-style clinical reasoning demo that interprets protocol eligibility language, evaluates synthetic patient evidence, and produces transparent criterion-level recommendations with audit-friendly reasoning traces.",
+      "Clinical reasoning demo that interprets protocol language, evaluates synthetic patient evidence, and produces transparent criterion-level recommendations with audit-friendly traces.",
   },
   {
-    title: "Semantic Search",
+    title: "Semantic Patient Search",
     icon: "🔍",
     href: "https://semantic-patient-search.jeffrey-ross.me/",
+    tags: ["Vector Search", "Embeddings", "Cohort Discovery"],
     summary:
-      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords—supporting faster cohort discovery and data exploration.",
+      "Natural-language search across patient and clinical data using embeddings and vector similarity to identify relevant patients by meaning, not just keyword matches.",
   },
   {
-    title: "TrainJazz — AI Music + Data Stream Orchestration",
+    title: "TrainJazz — AI Data Orchestration",
     icon: "🎷",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/train-jazz",
+    tags: ["Event Streams", "AI Agents", "Generative UI"],
     summary:
-      "An interactive AI system that transforms live or simulated event streams into dynamic jazz compositions. TrainJazz maps structured data into musical patterns in real time, using agentic orchestration to coordinate rhythm, harmony, and improvisation layers.",
+      "Interactive AI system that transforms live or simulated event streams into dynamic jazz compositions, coordinating rhythm, harmony, and improvisation layers in real time.",
   },
   {
     title: "AI FX Insights",
     icon: "📈",
     href: "https://fx-insights.jeffrey-ross.me",
+    tags: ["Market Intel", "LLM Briefs", "Streaming"],
     summary:
-      "Intelligent market analysis application that delivers concise, real-time foreign exchange summaries using large language models. It synthesizes macroeconomic signals, currency movements, and market sentiment into actionable insights.",
+      "Market intelligence application that synthesizes macroeconomic signals, FX movements, and market sentiment into concise, real-time client-ready briefs.",
   },
   {
     title: "AI Résumé Match",
     icon: "📄",
     href: "https://resume-analyzer.jeffrey-ross.me",
+    tags: ["Document AI", "Matching", "Recommendations"],
     summary:
-      "AI-powered application that evaluates how well a résumé aligns with a job description. It analyzes skills, experience, and qualifications to highlight matches, identify gaps, and provide actionable suggestions.",
+      "AI-powered analyzer that compares a résumé with a job description, highlights strengths and gaps, and provides targeted recommendations for improvement.",
   },
+];
+
+const capabilities = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "FastAPI",
+  "Vector Search",
+  "LLM Workflows",
+  "Streaming UI",
+  "AWS Lightsail",
 ];
 
 export default function Projects() {
@@ -68,33 +87,56 @@ export default function Projects() {
 
       <main className="projectsMain">
         <section className="projectsHero">
+          <p className="projectsEyebrow">Applied AI Product Systems</p>
           <h1 className="projectsTitle">Portfolio Projects</h1>
-          <p className="blogIndexIntro">
-            A collection of applied AI and data product demos spanning clinical
-            reasoning, semantic search, lifecycle automation, startup finance,
-            résumé analysis, and market intelligence. Each project is designed
-            to show both the user experience and the underlying product
-            architecture.
+          <p className="projectsIntro">
+            Multi-agent AI workflows, semantic retrieval systems, clinical
+            reasoning engines, and operational automation demos designed to
+            showcase product thinking, system architecture, and explainable AI
+            interaction patterns.
           </p>
         </section>
 
         <section className="projectsGrid" aria-label="Portfolio projects">
-          {projects.map(({ title, icon, href, summary }) => (
+          {projects.map(({ title, icon, href, summary, tags }) => (
             <Link key={href} href={href} className="projectCard">
-              <div className="projectCardHeader">
-                <span className="projectCardIcon" aria-hidden="true">
-                  {icon}
-                </span>
-                <h2 className="projectCardTitle">{title}</h2>
+              <div className="projectCardContent">
+                <div className="projectCardHeader">
+                  <span className="projectCardIcon" aria-hidden="true">
+                    {icon}
+                  </span>
+                  <h2 className="projectCardTitle">{title}</h2>
+                </div>
+
+                <div
+                  className="projectTags"
+                  aria-label={`${title} capabilities`}
+                >
+                  {tags.map((tag) => (
+                    <span key={tag} className="projectTag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <p className="projectCardText">{summary}</p>
               </div>
 
-              <p className="projectCardText">{summary}</p>
-
-              <span className="projectLink">
-                View project description and live demo →
-              </span>
+              <span className="projectLink">Explore project →</span>
             </Link>
           ))}
+        </section>
+
+        <section
+          className="projectsCapabilities"
+          aria-label="Selected technologies"
+        >
+          <span className="projectsCapabilitiesLabel">Built with</span>
+          <div className="projectsCapabilitiesList">
+            {capabilities.map((capability) => (
+              <span key={capability}>{capability}</span>
+            ))}
+          </div>
         </section>
       </main>
 

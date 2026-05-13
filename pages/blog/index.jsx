@@ -6,50 +6,57 @@ const posts = [
   {
     title: "Agentic Clinical Trial Eligibility",
     icon: "🧬",
+    tags: ["Clinical AI", "Multi-Agent", "HITL Review"],
     summary:
-      "Clinical trial recruitment sounds straightforward: find eligible patients, enroll them. At Memorial Sloan Kettering, we designed an agentic AI service that uses an LLM to contextualize protocol PDFs and evaluate incoming patients.",
+      "Designing an agentic clinical AI workflow that interprets protocol PDFs, contextualizes patient evidence, and supports explainable eligibility review.",
     href: "/blog/agentic-clinical-trial-eligibility",
   },
   {
     title: "Agentic Customer Lifecycle Platform",
     icon: "⚙️",
+    tags: ["Lifecycle AI", "Revenue Ops", "Workflow Design"],
     summary:
-      "A multi-agent lifecycle system that ingests prospects, evaluates fit and stage, detects revenue blockers, and guides human decision-making to unlock conversion and maximize revenue impact.",
+      "A multi-agent lifecycle system that evaluates fit, detects revenue blockers, and guides human decision-making across onboarding, activation, and retention.",
     href: "/blog/agentic-customer-lifecycle-platform",
   },
   {
     title: "Claude Clinical Protocol Reasoning",
     icon: "🧠",
+    tags: ["Protocol AI", "Reasoning", "Audit Trace"],
     summary:
-      "A project write-up on designing a Claude-style reasoning workflow for clinical protocol interpretation, synthetic patient evaluation, eligibility recommendations, and transparent audit trails.",
+      "A write-up on Claude-style clinical protocol reasoning, synthetic patient evaluation, transparent recommendations, and audit-friendly eligibility traces.",
     href: "/blog/claude-clinical-protocol-reasoning-engine",
   },
   {
     title: "Semantic Search",
     icon: "🔎",
+    tags: ["Vector Search", "Embeddings", "Clinical Data"],
     summary:
-      "AI-powered search tool that enables natural language queries across patient and clinical data. Using embeddings and vector similarity, it identifies relevant patients based on meaning—not just keywords.",
+      "How natural-language search, embeddings, and vector similarity can help users find relevant patient cohorts by meaning instead of keyword matches.",
     href: "/blog/semantic-patient-search",
   },
   {
     title: "Common Data Model",
     icon: "🧩",
+    tags: ["Biobanking", "Ontology", "Data Platforms"],
     summary:
-      "Modern biobanking is not just about storing specimens — it’s about structuring data so research is discoverable, reproducible, and scalable across multiple biobanks and data platforms.",
+      "A practical look at how common data models and ontologies work together to make biobank research data discoverable, reusable, and scalable.",
     href: "/blog/ontology-vs-cdm-biobanking",
   },
   {
     title: "Concordance Testing",
     icon: "⚖️",
+    tags: ["Data Quality", "Migration", "Validation"],
     summary:
-      "Concordance testing is the backbone of trustworthy data migrations and integrations, especially in regulated clinical research environments.",
+      "Why concordance testing matters for regulated data migrations, daily synchronization checks, and trust in downstream analytics and platform workflows.",
     href: "/blog/concordance-testing",
   },
   {
     title: "TrainJazz — Turning Event Streams into Music with AI",
     icon: "🎷",
+    tags: ["Event Streams", "Creative AI", "Agents"],
     summary:
-      "TrainJazz is an experiment in mapping structured event streams to music generation. Using an agentic architecture, the system listens to incoming signals, interprets patterns, and translates them into evolving jazz compositions in real time. This project explores streaming systems, human-in-the-loop interaction, and the boundary between analytical and creative AI applications.",
+      "An experiment in translating structured event streams into evolving jazz compositions through agentic interpretation, streaming signals, and human interaction.",
     href: "/blog/train-jazz",
   },
 ];
@@ -61,34 +68,43 @@ export default function Blog() {
 
       <main className="blogIndexMain">
         <header className="blogIndexHeader">
-          <p className="blogIndexEyebrow">Writing</p>
+          <p className="blogIndexEyebrow">Applied AI Engineering</p>
           <h1 className="blogIndexTitle">
-            Notes on AI, data platforms, and product engineering
+            Notes on AI Systems & Product Architecture
           </h1>
           <p className="blogIndexIntro">
-            A collection of project write-ups and technical essays covering
-            clinical AI, enterprise data systems, agentic workflow design,
-            product architecture, and applied engineering lessons from building
-            portfolio-scale demos.
+            Project write-ups and technical essays covering clinical AI,
+            semantic retrieval, workflow orchestration, and scalable data
+            platform design.
           </p>
         </header>
 
         <section className="blogIndexGrid" aria-label="Blog posts">
-          {posts.map(({ title, icon, summary, href }) => (
+          {posts.map(({ title, icon, tags, summary, href }) => (
             <Link key={href} href={href} className="blogIndexCardLinkWrapper">
               <article className="blogIndexCard">
-                <div className="blogIndexCardHeader">
-                  <span className="blogIndexCardIcon" aria-hidden="true">
-                    {icon}
-                  </span>
-                  <h2 className="blogIndexCardTitle">{title}</h2>
-                </div>
+                <div className="blogIndexCardBody">
+                  <div className="blogIndexCardHeader">
+                    <span className="blogIndexCardIcon" aria-hidden="true">
+                      {icon}
+                    </span>
+                    <h2 className="blogIndexCardTitle">{title}</h2>
+                  </div>
 
-                <p className="blogIndexSummary">{summary}</p>
+                  <div className="blogIndexTags" aria-label={`${title} topics`}>
+                    {tags.map((tag) => (
+                      <span key={tag} className="blogIndexTag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="blogIndexSummary">{summary}</p>
+                </div>
 
                 <div className="blogIndexCardFooter">
                   <span className="blogIndexReadMore">
-                    Read post <span aria-hidden="true">→</span>
+                    Read article <span aria-hidden="true">→</span>
                   </span>
                 </div>
               </article>

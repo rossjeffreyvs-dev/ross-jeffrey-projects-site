@@ -61,10 +61,10 @@ html.dark .homeHero {
   text-align: center;
 }
 
-.homeEyebrow {
+.homeHeroEyebrow {
   margin: 0 0 1.15rem;
-  color: #434b55;
-  font-size: 0.46rem;
+  color: #848990;
+  font-size: 0.76rem;
   line-height: 1.2;
   letter-spacing: 0.18em;
   text-transform: uppercase;

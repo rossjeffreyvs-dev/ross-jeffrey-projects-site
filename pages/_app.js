@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "../styles/content.css";
 import "../styles/blog-post.css";
+import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import Script from "next/script";
@@ -10,7 +11,11 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      {/* Google Analytics */}
+      <Head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
+      </Head>
+
       {GA_ID && (
         <>
           <Script
@@ -28,7 +33,6 @@ function MyApp({ Component, pageProps, router }) {
         </>
       )}
 
-      {/* Your existing app */}
       <AnimatePresence mode="wait">
         <motion.div
           key={router.route}

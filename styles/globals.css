@@ -76,7 +76,7 @@ html.dark .homeEyebrow {
 }
 
 .homeHeroTitle {
-  max-width: 980px;
+  max-width: 680px;
   margin: 3px auto;
   color: #0f172a;
   font-size: clamp(2.35rem, 3.7vw, 3.55rem);
@@ -92,7 +92,7 @@ html.dark .homeHeroTitle {
 
 .homeHeroText {
   max-width: 760px;
-  margin: 1.5rem auto 0;
+  margin: 1rem auto 0;
   color: #475569;
   font-size: clamp(1.04rem, 1.7vw, 1.18rem);
   line-height: 1.7;

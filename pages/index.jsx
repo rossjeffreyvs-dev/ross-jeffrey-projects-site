@@ -11,16 +11,16 @@ export default function Home() {
         <section className="homeHero">
           <div className="homeHeroInner">
             <p className="homeHeroEyebrow">
-              AI PLATFORMS • DATA SYSTEMS • WORKFLOW ORCHESTRATION
+              AI PLATFORMS • ENTERPRISE SYSTEMS • WORKFLOW ORCHESTRATION
             </p>
 
             <h1 className="homeHeroTitle">
-              Designing Data and AI Systems for Complex Workflows
+              AI and Data Systems <br />
+              for Operational Workflows
             </h1>
 
             <p className="homeHeroText">
-              I design data and AI systems that connect product strategy,
-              workflow orchestration, and hands-on engineering execution.
+              Bridging product strategy and hands-on engineering execution.
             </p>
 
             <div className="homeHeroActions">
@@ -59,11 +59,11 @@ export default function Home() {
 
         <section className="homeConfidence">
           <div className="homeConfidenceInner">
-            <p className="homeSectionEyebrow">
-              Product leadership + engineering execution
+            <p className="homeLogoEyebrow">
+              Operator Mindset | Technical Execution
             </p>
             <h2 className="homeSectionTitle">
-              Why Teams Build with Confidence
+              Product Leadership with Technical Depth
             </h2>
 
             <div className="homeWhyGrid">
@@ -84,7 +84,7 @@ export default function Home() {
               <article className="homeWhyCard">
                 <h3 className="homeWhyTitle">
                   <span className="homeWhyIcon">🧠</span>
-                  <span>Full-Stack Product Innovation</span>
+                  <span>Product and Platform Innovation</span>
                 </h3>
                 <p>
                   Led modernization of $100M global platforms at Euromoney

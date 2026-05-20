@@ -1,134 +1,141 @@
 # Ross Jeffrey Projects Site
 
-A modern portfolio site showcasing applied AI projects, technical writing, and product-focused engineering work.
+Portfolio platform showcasing applied AI systems, workflow orchestration platforms, technical product leadership, and enterprise workflow architecture.
 
-Built with Next.js and Tailwind, the site brings together interactive demos, detailed project write-ups, and long-form blog content across clinical AI, semantic search, data platforms, and workflow automation.
+Built with Next.js and React, the site presents interactive AI demos, technical case studies, architecture write-ups, and long-form product-oriented engineering content spanning healthcare, finance, semantic retrieval, and operational workflow systems.
 
 ---
 
-## Live site
+## Live Site
 
 🌐 https://www.jeffrey-ross.me
 
 ---
 
-## Overview
+## Purpose
 
-This site serves as the primary entry point for my public portfolio.
+This site serves as the primary presentation layer for a portfolio of AI-native workflow systems and applied product platforms.
 
-It is designed to present technical work as **product experiences**, not just code — combining:
+The goal is to present technical systems as product experiences rather than standalone code samples.
 
-- project summaries and live demos
-- long-form blog posts and architecture write-ups
-- a clean, consistent visual system
-- responsive layouts across desktop and mobile
+The site combines:
 
-The goal is to make complex systems approachable, readable, and visually structured.
+- interactive product demos
+- architecture-oriented project pages
+- long-form technical writing
+- operational workflow walkthroughs
+- product strategy and PM playbooks
+- consistent design systems across projects
 
 ---
 
-## Key sections
+## Featured Project Areas
 
-### Projects
+### Applied AI Workflow Systems
 
-A curated set of interactive AI demos, including:
+Interactive demonstrations focused on:
+
+- agentic workflow orchestration
+- operational AI systems
+- semantic retrieval interfaces
+- explainable recommendation systems
+- enterprise workflow automation
+- streaming AI interaction patterns
+
+Featured projects include:
 
 - Agentic Clinical Trial Eligibility
 - Semantic Patient Search
 - AI Résumé Match
 - AI FX Insights
-
-Each project includes:
-
-- summary and positioning
-- link to live demo
-- supporting technical context
+- Agentic Startup Finance and Operations
+- Workflow orchestration experiments
 
 ---
 
-### Blog / Writing
+### Technical Writing and Architecture Content
 
-Long-form content focused on:
+Long-form writing focused on:
 
-- AI system design
+- AI system architecture
+- workflow orchestration patterns
+- enterprise data systems
+- semantic retrieval and search
 - clinical and research workflows
-- enterprise data platforms
-- semantic search and retrieval
-- product-oriented engineering
-
-Posts are designed with structured layouts and embedded diagrams for clarity.
+- operational AI interaction design
+- product-oriented engineering systems
 
 ---
 
-### Profile / About
+### Product and Platform Positioning
 
-Overview of background, focus areas, and experience across:
+The portfolio emphasizes the intersection of:
 
-- AI-enabled product development
-- data platforms and integrations
-- healthcare and research systems
-- workflow automation and APIs
-
----
-
-### Contact
-
-Integrated contact form powered by SendGrid.
+- product strategy
+- technical execution
+- AI-native workflows
+- enterprise operational systems
+- full-stack product architecture
 
 ---
 
-## Technology stack
+## Design Approach
+
+The site is intentionally structured as a product platform rather than a traditional developer portfolio.
+
+Design principles include:
+
+- content-first readability
+- consistent visual hierarchy
+- reusable project layouts
+- responsive multi-device design
+- subtle motion and transitions
+- architecture-oriented presentation
+- operational workflow storytelling
+
+---
+
+## Technology Stack
 
 - Next.js
 - React
 - Tailwind CSS
 - Framer Motion
-- next-themes (light / dark mode)
-- SendGrid (contact form)
+- next-themes
+- SendGrid
+- Vercel
 
 ---
 
-## Repository structure
+## Repository Structure
 
 ```text
 .
-├── components/         # shared UI components (navbar, footer, etc.)
+├── components/         # shared UI components
 ├── pages/              # route-based pages
-├── public/             # static assets and images
-├── styles/             # global and page-specific styles
+├── public/             # static assets
+├── styles/             # global and project-specific styles
 ├── next.config.js
 └── package.json
 ```
 
 ---
 
-## Design approach
+## Local Development
 
-The site is intentionally content-first, with a focus on:
-
-- readability for technical writing
-- consistent typography and spacing
-- clear hierarchy across sections
-- reusable layouts for projects and blog posts
-- subtle motion for transitions and interactions
-
----
-
-## Local development
-
-### Install dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Run locally
+### Run Locally
 
 ```bash
 npm run dev
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:3000
@@ -136,7 +143,7 @@ http://localhost:3000
 
 ---
 
-## Production build
+## Production Build
 
 ```bash
 npm run build
@@ -147,17 +154,17 @@ npm run start
 
 ## Deployment
 
-This site is deployed on **Vercel**.
+The site is deployed on Vercel.
 
 Typical workflow:
 
-- push changes to GitHub
+- push updates to GitHub
 - Vercel automatically builds and deploys
-- environment variables configured in Vercel dashboard
+- environment variables configured in Vercel
 
 ---
 
-## Environment variables
+## Environment Variables
 
 Example:
 
@@ -166,18 +173,19 @@ NEXT_PUBLIC_GA_ID=your_google_analytics_id
 SENDGRID_API_KEY=your_sendgrid_key
 ```
 
-These should be defined locally in `.env.local` and in Vercel for production.
+Define locally in `.env.local` and in Vercel for production deployment.
 
 ---
 
-## Related repositories
+## Related Repository
 
-- Multi-project AI platform:  
-  https://github.com/rossjeffreyvs-dev/jr-portfolio-projects
+Applied AI platform repository:
+
+https://github.com/rossjeffreyvs-dev/jr-portfolio-projects
 
 ---
 
 ## Author
 
 **Jeff Ross**  
-AI, data platforms, and product engineering
+Technical product leader focused on AI platforms, workflow systems, enterprise data architecture, and applied operational AI.

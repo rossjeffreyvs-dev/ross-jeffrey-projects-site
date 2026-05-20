@@ -70,7 +70,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub
+                Code & Architecture
               </Link>
             </li>
           </ul>

@@ -1,4 +1,4 @@
-# Ross Jeffrey Projects Site
+# Jeffrey Ross - Portfolio Projects Site
 
 Portfolio platform showcasing applied AI systems, workflow orchestration platforms, technical product leadership, and enterprise workflow architecture.
 

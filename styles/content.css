@@ -217,7 +217,7 @@ html.dark .projectsTitle {
 .projectsSubtitle,
 .projectsIntro,
 .blogIndexIntro {
-  max-width: 920px;
+  max-width: 960px;
   margin: 1rem auto 0;
   color: #475569;
   font-size: clamp(1.05rem, 1.35vw, 1.18rem);

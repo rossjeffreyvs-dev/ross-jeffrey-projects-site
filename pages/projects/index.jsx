@@ -98,10 +98,14 @@ export default function Projects() {
           <p className="projectsEyebrow">Applied AI Product Systems</p>
           <h1 className="projectsTitle">Portfolio Projects</h1>
           <p className="projectsIntro">
-            Multi-agent AI workflows, semantic retrieval systems, clinical
+            Multi-agent workflows, reasoning systems, semantic retrieval,
+            financial infrastructure demos, and operational AI interfaces
+            designed to showcase product thinking, system architecture, and
+            explainable workflow orchestration.
+            {/* Multi-agent AI workflows, semantic retrieval systems, clinical
             reasoning engines, and operational automation demos designed to
             showcase product thinking, system architecture, and explainable AI
-            interaction patterns.
+            interaction patterns. */}
           </p>
         </section>
 

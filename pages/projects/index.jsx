@@ -28,6 +28,14 @@ const projects = [
       "Multi-agent finance and operations platform that interprets founder questions, analyzes runway and revenue risk, coordinates operational signals, and recommends next actions.",
   },
   {
+    title: "Open Finance Insights Platform",
+    icon: "🏦",
+    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/open-finance-insights-platform",
+    tags: ["Open Finance", "CDM", "Insight Workflow"],
+    summary:
+      "AI-powered open finance platform that normalizes account, balance, and transaction data into a common financial model, then generates explainable cash-flow, subscription, and financial-health insights.",
+  },
+  {
     title: "Claude Clinical Protocol Reasoning",
     icon: "🧠",
     href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine",

@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Agentic Clinical Trial Eligibility",
     icon: "🧬",
-    href: "https://clinical-trial-patient-agent.jeffrey-ross.me/",
+    href: "https://apps.jeffrey-ross.me/clinical-trial-patient-agent",
     tags: ["Multi-Agent", "Clinical AI", "HITL Review"],
     summary:
       "Multi-agent eligibility evaluation that combines semantic search, protocol interpretation, and explainable reasoning to surface high-quality clinical trial matches for human review.",
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Agentic Customer Lifecycle",
     icon: "⚙️",
-    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-customer-lifecycle-platform",
+    href: "https://apps.jeffrey-ross.me/agentic-customer-lifecycle-platform",
     tags: ["Lifecycle AI", "Revenue Ops", "Workflow"],
     summary:
       "Agentic workflow that detects onboarding and activation drop-offs, prioritizes customer interventions, and quantifies revenue impact across the lifecycle journey.",
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Startup Finance Ops",
     icon: "💰",
-    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/agentic-startup-finance-ops",
+    href: "https://apps.jeffrey-ross.me/agentic-startup-finance-ops",
     tags: ["Finance Ops", "Runway Risk", "Tool Events"],
     summary:
       "Multi-agent finance and operations platform that interprets founder questions, analyzes runway and revenue risk, coordinates operational signals, and recommends next actions.",
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "Open Finance Insights Platform",
     icon: "🏦",
-    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/open-finance-insights-platform",
+    href: "https://apps.jeffrey-ross.me/open-finance-insights-platform",
     tags: ["Open Finance", "CDM", "Insight Workflow"],
     summary:
       "AI-powered open finance platform that normalizes account, balance, and transaction data into a common financial model, then generates explainable cash-flow, subscription, and financial-health insights.",
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Claude Clinical Protocol Reasoning",
     icon: "🧠",
-    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/claude-clinical-protocol-reasoning-engine",
+    href: "https://apps.jeffrey-ross.me/claude-clinical-protocol-reasoning-engine",
     tags: ["Protocol AI", "Audit Trace", "Reasoning"],
     summary:
       "Clinical reasoning demo that interprets protocol language, evaluates synthetic patient evidence, and produces transparent criterion-level recommendations with audit-friendly traces.",
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Semantic Patient Search",
     icon: "🔍",
-    href: "https://semantic-patient-search.jeffrey-ross.me/",
+    href: "https://apps.jeffrey-ross.me/semantic-patient-search",
     tags: ["Vector Search", "Embeddings", "Cohort Discovery"],
     summary:
       "Natural-language search across patient and clinical data using embeddings and vector similarity to identify relevant patients by meaning, not just keyword matches.",
@@ -54,7 +54,7 @@ const projects = [
   {
     title: "TrainJazz — AI Data Orchestration",
     icon: "🎷",
-    href: "https://jr-portfolio-projects.dtw628ha8cm94.us-west-2.cs.amazonlightsail.com/train-jazz",
+    href: "https://apps.jeffrey-ross.me/train-jazz",
     tags: ["Event Streams", "AI Agents", "Generative UI"],
     summary:
       "Interactive AI system that transforms live or simulated event streams into dynamic jazz compositions, coordinating rhythm, harmony, and improvisation layers in real time.",
@@ -62,7 +62,7 @@ const projects = [
   {
     title: "AI FX Insights",
     icon: "📈",
-    href: "https://fx-insights.jeffrey-ross.me",
+    href: "https://apps.jeffrey-ross.me/fx-insights",
     tags: ["Market Intel", "LLM Briefs", "Streaming"],
     summary:
       "Market intelligence application that synthesizes macroeconomic signals, FX movements, and market sentiment into concise, real-time client-ready briefs.",
@@ -70,7 +70,7 @@ const projects = [
   {
     title: "AI Résumé Match",
     icon: "📄",
-    href: "https://resume-analyzer.jeffrey-ross.me",
+    href: "https://apps.jeffrey-ross.me/resume-analyzer",
     tags: ["Document AI", "Matching", "Recommendations"],
     summary:
       "AI-powered analyzer that compares a résumé with a job description, highlights strengths and gaps, and provides targeted recommendations for improvement.",
